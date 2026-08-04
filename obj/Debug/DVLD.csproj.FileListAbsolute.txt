@@ -1,0 +1,14 @@
+E:\DVLD\DVLD\DVLD\bin\Debug\DVLD.exe.config
+E:\DVLD\DVLD\DVLD\bin\Debug\DVLD.exe
+E:\DVLD\DVLD\DVLD\bin\Debug\DVLD.pdb
+E:\DVLD\DVLD\DVLD\obj\Debug\DVLD.csproj.AssemblyReference.cache
+E:\DVLD\DVLD\DVLD\obj\Debug\DVLD.ctrlPersonCard.resources
+E:\DVLD\DVLD\DVLD\obj\Debug\DVLD.Form1.resources
+E:\DVLD\DVLD\DVLD\obj\Debug\DVLD.Properties.Resources.resources
+E:\DVLD\DVLD\DVLD\obj\Debug\DVLD.csproj.GenerateResource.cache
+E:\DVLD\DVLD\DVLD\obj\Debug\DVLD.csproj.CoreCompileInputs.cache
+E:\DVLD\DVLD\DVLD\obj\Debug\DVLD.exe
+E:\DVLD\DVLD\DVLD\obj\Debug\DVLD.pdb
+E:\DVLD\DVLD\DVLD\obj\Debug\DVLD.exe.config
+E:\DVLD\DVLD\DVLD\obj\Debug\DVLD.Form2.resources
+E:\DVLD\DVLD\DVLD\obj\Debug\DVLD.Calc.resources
