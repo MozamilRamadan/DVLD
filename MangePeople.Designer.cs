@@ -1,6 +1,6 @@
 ﻿namespace DVLD
 {
-    partial class Form2
+    partial class MangePeople
     {
         /// <summary>
         /// Required designer variable.
@@ -186,6 +186,7 @@
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
             this.deleteToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
             this.deleteToolStripMenuItem.Text = "Delete";
+            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
             // sendEmailToolStripMenuItem
             // 

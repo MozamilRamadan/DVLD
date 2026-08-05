@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace DVLD
 {
-    public partial class Form1 : Form
+    public partial class frmMain : Form
     {
-        public Form1()
+        public frmMain()
         {
             InitializeComponent();
 
@@ -21,15 +21,23 @@ namespace DVLD
 
         private void tslPeople_Click(object sender, EventArgs e)
         {
-            Form2 frm = new Form2();
+            MangePeople frm = new MangePeople();
 
             frm.ShowDialog();
         }
 
         private void toolStripLabel1_Click(object sender, EventArgs e)
         {
-            frmTest frmTest = new frmTest();
-            frmTest.ShowDialog();
+            frmMangeUsers users = new frmMangeUsers();
+            users.Show();
+        }
+
+
+        private void singOutToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+            frmLogin frmLogin = new frmLogin();
+            frmLogin.Show();
         }
     }
 }

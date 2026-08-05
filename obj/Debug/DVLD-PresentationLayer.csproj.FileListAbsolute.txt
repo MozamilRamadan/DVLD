@@ -2,8 +2,6 @@ E:\DVLD\DVLD\DVLD\obj\Debug\DVLD-PresentationLayer.csproj.AssemblyReference.cach
 E:\DVLD\DVLD\DVLD\obj\Debug\DVLD.exe.config
 E:\DVLD\DVLD\DVLD\obj\Debug\DVLD.Calc.resources
 E:\DVLD\DVLD\DVLD\obj\Debug\DVLD.ctrlPersonCard.resources
-E:\DVLD\DVLD\DVLD\obj\Debug\DVLD.Form1.resources
-E:\DVLD\DVLD\DVLD\obj\Debug\DVLD.Form2.resources
 E:\DVLD\DVLD\DVLD\obj\Debug\DVLD.Properties.Resources.resources
 E:\DVLD\DVLD\DVLD\obj\Debug\DVLD-PresentationLayer.csproj.GenerateResource.cache
 E:\DVLD\DVLD\DVLD\obj\Debug\DVLD-PresentationLayer.csproj.CoreCompileInputs.cache
@@ -23,3 +21,7 @@ E:\DVLD\DVLD\DVLD\obj\Debug\DVLD.ctrlAddNew.resources
 E:\DVLD\DVLD\DVLD\obj\Debug\DVLD.frmAddNew.resources
 E:\DVLD\DVLD\DVLD\obj\Debug\DVLD.frmTest.resources
 E:\DVLD\DVLD\DVLD\obj\Debug\DVLD.frmPersonCard.resources
+E:\DVLD\DVLD\DVLD\obj\Debug\DVLD.frmLogin.resources
+E:\DVLD\DVLD\DVLD\obj\Debug\DVLD.frmMain.resources
+E:\DVLD\DVLD\DVLD\obj\Debug\DVLD.MangePeople.resources
+E:\DVLD\DVLD\DVLD\obj\Debug\DVLD.frmMangeUsers.resources
