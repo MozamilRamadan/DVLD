@@ -20,10 +20,15 @@ namespace DVLD
 
         private void frmTest_Load(object sender, EventArgs e)
         {
+            clsPerson person = new clsPerson();
+            int id = 1026;
+            person = clsPerson.Find(id);
+
+            int newId = person.PersonID;
 
             ctrlPersonCard PersonCard = new ctrlPersonCard();
 
-            PersonCard.LoadPersonInfo(1026);
+            PersonCard.LoadPersonInfo(newId);
         }
     }
 }

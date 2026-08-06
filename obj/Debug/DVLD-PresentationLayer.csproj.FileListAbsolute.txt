@@ -25,3 +25,4 @@ E:\DVLD\DVLD\DVLD\obj\Debug\DVLD.frmLogin.resources
 E:\DVLD\DVLD\DVLD\obj\Debug\DVLD.frmMain.resources
 E:\DVLD\DVLD\DVLD\obj\Debug\DVLD.MangePeople.resources
 E:\DVLD\DVLD\DVLD\obj\Debug\DVLD.frmMangeUsers.resources
+E:\DVLD\DVLD\DVLD\obj\Debug\DVLD.frmAddUser.resources
