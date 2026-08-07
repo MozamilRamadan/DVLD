@@ -71,22 +71,24 @@
             // btnSave
             // 
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(801, 561);
+            this.btnSave.Location = new System.Drawing.Point(777, 561);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(80, 31);
+            this.btnSave.Size = new System.Drawing.Size(101, 31);
             this.btnSave.TabIndex = 1;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnCancel
             // 
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(901, 561);
+            this.btnCancel.Location = new System.Drawing.Point(884, 561);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(89, 31);
+            this.btnCancel.Size = new System.Drawing.Size(106, 31);
             this.btnCancel.TabIndex = 2;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // tabControl1
             // 
@@ -216,7 +218,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(13, 236);
+            this.label6.Location = new System.Drawing.Point(3, 236);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(148, 18);
             this.label6.TabIndex = 8;
@@ -224,10 +226,11 @@
             // 
             // txtConfirmPassword
             // 
-            this.txtConfirmPassword.Location = new System.Drawing.Point(167, 233);
+            this.txtConfirmPassword.Location = new System.Drawing.Point(177, 233);
             this.txtConfirmPassword.Name = "txtConfirmPassword";
+            this.txtConfirmPassword.PasswordChar = '*';
             this.txtConfirmPassword.Size = new System.Drawing.Size(184, 24);
-            this.txtConfirmPassword.TabIndex = 7;
+            this.txtConfirmPassword.TabIndex = 3;
             // 
             // label5
             // 
@@ -240,10 +243,11 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(167, 184);
+            this.txtPassword.Location = new System.Drawing.Point(177, 184);
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(184, 24);
-            this.txtPassword.TabIndex = 5;
+            this.txtPassword.TabIndex = 2;
             // 
             // lblUserID
             // 
@@ -265,10 +269,10 @@
             // 
             // txtUserName
             // 
-            this.txtUserName.Location = new System.Drawing.Point(167, 132);
+            this.txtUserName.Location = new System.Drawing.Point(177, 132);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(184, 24);
-            this.txtUserName.TabIndex = 2;
+            this.txtUserName.TabIndex = 1;
             // 
             // label3
             // 

@@ -49,5 +49,42 @@ namespace DVLD
             frmAddUser addUser = new frmAddUser();
             addUser.ShowDialog();
         }
+
+        private void editToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            int personID = Convert.ToInt32(dataGridView1.CurrentRow.Cells["PersonID"].Value);
+            frmAddUser Update = new frmAddUser(personID);
+            Update.DataBack += Update_DataBack;
+            Update.ShowDialog();
+        }
+
+        private void Update_DataBack(object sendor)
+        {
+            LoadAllUsers();
+        }
+
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int Id = -1;
+            if (_dt != null)
+                 Id = Convert.ToInt32(dataGridView1.CurrentRow.Cells["UserID"].Value);
+            if (clsUsers.DeleteUser(Id))
+            {
+                MessageBox.Show("Deleted Successfuly", "Delete Person");
+                LoadAllUsers();
+            }
+            else
+            {
+                MessageBox.Show("Faild To Delete","Delete Person");
+            }
+        }
+
+        private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int PersonID = Convert.ToInt32(dataGridView1.CurrentRow.Cells["PersonID"].Value);
+            frmChangePassword changePassword = new frmChangePassword(PersonID);
+            changePassword.ShowDialog();
+        }
     }
 }

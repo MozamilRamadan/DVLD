@@ -30,6 +30,7 @@
         {
             this.ctrlAddNew1 = new DVLD.ctrlAddNew();
             this.btnSave = new System.Windows.Forms.Button();
+            this.ctrlPersonCard1 = new DVLD.ctrlPersonCard();
             this.SuspendLayout();
             // 
             // ctrlAddNew1
@@ -48,16 +49,24 @@
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
             // 
+            // ctrlPersonCard1
+            // 
+            this.ctrlPersonCard1.AllowDrop = true;
+            this.ctrlPersonCard1.Location = new System.Drawing.Point(34, 20);
+            this.ctrlPersonCard1.Name = "ctrlPersonCard1";
+            this.ctrlPersonCard1.Size = new System.Drawing.Size(953, 317);
+            this.ctrlPersonCard1.TabIndex = 2;
+            // 
             // frmTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1218, 577);
+            this.Controls.Add(this.ctrlPersonCard1);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.ctrlAddNew1);
             this.Name = "frmTest";
             this.Text = "frmTest";
-            this.Load += new System.EventHandler(this.frmTest_Load);
             this.ResumeLayout(false);
 
         }
@@ -66,5 +75,6 @@
 
         private ctrlAddNew ctrlAddNew1;
         private System.Windows.Forms.Button btnSave;
+        private ctrlPersonCard ctrlPersonCard1;
     }
 }

@@ -34,9 +34,9 @@
             // ctrlPersonCard1
             // 
             this.ctrlPersonCard1.AllowDrop = true;
-            this.ctrlPersonCard1.Location = new System.Drawing.Point(12, 1);
+            this.ctrlPersonCard1.Location = new System.Drawing.Point(0, 0);
             this.ctrlPersonCard1.Name = "ctrlPersonCard1";
-            this.ctrlPersonCard1.Size = new System.Drawing.Size(893, 345);
+            this.ctrlPersonCard1.Size = new System.Drawing.Size(953, 317);
             this.ctrlPersonCard1.TabIndex = 0;
             // 
             // frmPersonCard

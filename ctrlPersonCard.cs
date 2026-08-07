@@ -17,7 +17,7 @@ namespace DVLD
     public partial class ctrlPersonCard : UserControl
     {
         clsPerson _Person;
-        int _PersonID = -1;
+        int _PersonID;
         public int PersonID
         {
             get { return _PersonID; }
@@ -30,15 +30,34 @@ namespace DVLD
 
         public void LoadPersonInfo(int PersonID)
         {
-            _Person =  clsPerson.Find(PersonID);
+            _Person = clsPerson.Find(PersonID);
+
             if (_Person != null)
             {
                 _FillPersonInfo();
-               
+
             }
-            else { 
+            else
+            {
                 _ResetPersonInfo();
                 MessageBox.Show("No Person With ID " + _PersonID.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
+        public void LoadPersonInfo(string Nano)
+        {
+            _Person = clsPerson.Find(Nano);
+
+            if (_Person != null)
+            {
+                _FillPersonInfo();
+
+            }
+            else
+            {
+                _ResetPersonInfo();
+                MessageBox.Show("No Person With ID " + Nano.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
@@ -76,14 +95,15 @@ namespace DVLD
         }
 
         private void _ResetPersonInfo() {
-            _Person.NationalNo = "";
-            _Person.Gendor=0;
-            _Person.Email = "";
-            _Person.Address = "";
-            _Person.Phone = "";
-            _Person.ImagePath = "";
-            _Person.DateOfBirth = DateTime.Now;
-            _Person.NationalityCountryID = 0;
+            lblFullName.Text = "" + " ";
+            lblNaionalNo.Text = "";
+            lblGendor.Text = "Male";
+            lblEmail.Text = "";
+            lblAddress.Text = "";
+            lblDate.Text = "";
+            lblPhone.Text = "";
+            //lblCountry.Text = _Person.NationalityCountryID.ToString();
+            lblCountry.Text = "";
 
         }
 

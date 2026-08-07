@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.AxHost;
 
 namespace DVLD
 {
@@ -15,10 +16,44 @@ namespace DVLD
     {
         DataTable _dt;
         clsPerson _person;
-        public frmAddUser()
+        clsUsers _User = new clsUsers();
+        bool _IsUpdateMode = false;
+        int _PersonID = -1;
+        public delegate void DataBackEventHandler(object sender);
+        public event DataBackEventHandler DataBack;
+        public frmAddUser(int ID = -1)
         {
             InitializeComponent();
-        }
+            if (ID != -1)
+            {
+                _person = clsPerson.Find(ID);
+                if (_person != null)
+                {
+                    _IsUpdateMode = true;
+                    ctrlPersonCard1.LoadPersonInfo(ID);
+                    cmFiltter.Enabled = false;
+                    txtSearch.Enabled = false;
+                    _User = clsUsers.FindByPersonID(ID);
+                    _PersonID = _User.PersonID;
+                    if (_User != null)
+                    {
+                        lblUserID.Text = _User.UserID.ToString();
+                        txtUserName.Text = _User.UserName.ToString();
+                        txtPassword.Text = _User.Password.ToString();
+                        chIsActive.Checked = _User.IsActive;
+                    }
+                    this.Text = "Update User";
+                    btnSave.Text = "Update";
+                }
+            }
+            else
+            {
+                _person=new clsPerson();
+                this.Text = "Add New User";
+                btnSave.Text = "Add";
+                _IsUpdateMode=false;
+            }
+         }
 
         private void LaodAllPeople()
         {
@@ -35,6 +70,7 @@ namespace DVLD
         {
             txtSearch.Clear();
         }
+
         private void txtSearch_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (cmFiltter.SelectedItem == null)
@@ -48,6 +84,7 @@ namespace DVLD
                 case "NationalityCountryID":
                     // Allow only digits
                     e.Handled = !char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar);
+                    _PersonID = Convert.ToInt32(txtSearch.Text);
                     break;
 
                 case "FirstName":
@@ -59,6 +96,8 @@ namespace DVLD
                                 && !char.IsLetter(e.KeyChar)
                                 && e.KeyChar != ' ';
                     break;
+                case "IsActive":
+                    break;
 
                 default:
                     // Allow all characters
@@ -66,9 +105,23 @@ namespace DVLD
                     break;
             }
         }
+
+
         private void btnNext_Click(object sender, EventArgs e)
         {
-            tpLoginInfo.Show();
+            if (_IsUpdateMode)
+            {
+                tabControl1.SelectedIndex++;
+            }
+            else
+            {
+                clsUsers user = clsUsers.FindByPersonID(Convert.ToInt32(txtSearch.Text));
+
+                if (user != null)
+                    MessageBox.Show("This User Exist", "Error");
+                else
+                    tabControl1.SelectedIndex++;
+            }
         }
 
         private void frmAddUser_Load(object sender, EventArgs e)
@@ -111,11 +164,52 @@ namespace DVLD
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            _person = clsPerson.Find(1023);
-            ctrlPersonCard PersonCard = new ctrlPersonCard();
-            int Id = 0;
-            Id = _person.PersonID;
-            PersonCard.LoadPersonInfo(Id);
+            ctrlPersonCard1.LoadPersonInfo(Convert.ToInt32(txtSearch.Text));
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if(txtPassword != null)
+            {
+                if (txtPassword.Text == txtConfirmPassword.Text)
+                {
+                    FillUser();
+
+                    string Message = "Added Successfuly", Title = "Add New";
+
+                    if (_IsUpdateMode)
+                    {
+                        Message = "Update Successfuly";
+                        Title = "Update";
+                    }
+
+                    MessageBox.Show(Message, Title,MessageBoxButtons.OKCancel);
+                }
+                else
+                {
+                    MessageBox.Show("Passwords Not Match", "Error");
+                }
+
+                DataBack?.Invoke(this);
+
+            } 
+        }
+
+        private void FillUser()
+        {
+            _User.UserName = txtUserName.Text;
+            _User.Password = txtPassword.Text;
+            if(chIsActive.Checked)
+                _User.IsActive = true;
+            else 
+                _User.IsActive = false;
+            _User.PersonID = _PersonID;
+
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

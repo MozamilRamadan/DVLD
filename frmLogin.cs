@@ -55,7 +55,7 @@ namespace DVLD
             }
             else
             {
-                MessageBox.Show("Invaild User Name And Password.","Loggin Faild",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show("Invaild User Name Or Password.","Loggin Faild",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
 
         }
