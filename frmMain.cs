@@ -19,25 +19,61 @@ namespace DVLD
 
         }
 
-        private void tslPeople_Click(object sender, EventArgs e)
+        private void manageApplicationTypeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmManageApplicationTypes frmType = new frmManageApplicationTypes();
+            frmType.Show();
+        }
+
+        private void driverLincesServeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void showUserInfoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            int personID = clsCurrentUser.USER.PersonID;
+
+            frmPersonCard card = new frmPersonCard(personID);
+            card.Show();
+        }
+
+        private void changePasswordToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+            int personID = clsCurrentUser.USER.PersonID;
+            frmChangePassword change = new frmChangePassword(personID);
+            change.Show();
+        }
+
+        private void singOutToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+            clsCurrentUser.LogeOut();
+            this.Close();
+            frmLogin frmLogin = new frmLogin();
+            frmLogin.Show();
+        }
+
+        private void manageApplicationTypeToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmManageApplicationTypes frmApp = new frmManageApplicationTypes();
+            frmApp.Show();
+
+        }
+
+        private void manageTestTypeToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmTestTypes frmTestTypes = new frmTestTypes();
+            frmTestTypes.Show();
+        }
+
+        private void peopToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MangePeople frm = new MangePeople();
 
             frm.ShowDialog();
-        }
-
-        private void toolStripLabel1_Click(object sender, EventArgs e)
-        {
-            frmMangeUsers users = new frmMangeUsers();
-            users.Show();
-        }
-
-
-        private void singOutToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-            this.Close();
-            frmLogin frmLogin = new frmLogin();
-            frmLogin.Show();
         }
     }
 }

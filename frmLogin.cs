@@ -44,6 +44,8 @@ namespace DVLD
             _User = clsUsers.FindByUserNameAndPassword(_UserName,_Password);
             if (_User != null && _User.IsActive)
             {
+                clsCurrentUser.USER = _User;
+
                 if (chRemmberMe.Checked)  
                     SaveCredentials();
                 else

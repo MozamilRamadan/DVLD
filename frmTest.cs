@@ -17,7 +17,7 @@ namespace DVLD
         {
             InitializeComponent();
             //ctrlPersonCard1.LoadPersonInfo(1023);
-            ctrlPersonCard1.LoadPersonInfo(1025);
+           // ctrlPersonCard1.LoadPersonInfo(1025);
         }
 
     }

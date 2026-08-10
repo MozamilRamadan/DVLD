@@ -64,6 +64,13 @@
     <Compile Include="ctrlPersonCard.Designer.cs">
       <DependentUpon>ctrlPersonCard.cs</DependentUpon>
     </Compile>
+    <Compile Include="ctrlPersonInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ctrlPersonInfo.Designer.cs">
+      <DependentUpon>ctrlPersonInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CurrentUser.cs" />
     <Compile Include="frmAddUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +82,18 @@
     </Compile>
     <Compile Include="frmChangePassword.Designer.cs">
       <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditFees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditFees.Designer.cs">
+      <DependentUpon>frmEditFees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditTestTypes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditTestTypes.Designer.cs">
+      <DependentUpon>frmEditTestTypes.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
@@ -93,6 +112,24 @@
     </Compile>
     <Compile Include="frmMangeUsers.Designer.cs">
       <DependentUpon>frmMangeUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmManageApplicationTypes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManageApplicationTypes.Designer.cs">
+      <DependentUpon>frmManageApplicationTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNewLocalDrivingApplication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNewLocalDrivingApplication.Designer.cs">
+      <DependentUpon>frmNewLocalDrivingApplication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTestTypes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTestTypes.Designer.cs">
+      <DependentUpon>frmTestTypes.cs</DependentUpon>
     </Compile>
     <Compile Include="MangePeople.cs">
       <SubType>Form</SubType>
@@ -129,11 +166,20 @@
     <EmbeddedResource Include="ctrlPersonCard.resx">
       <DependentUpon>ctrlPersonCard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ctrlPersonInfo.resx">
+      <DependentUpon>ctrlPersonInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAddUser.resx">
       <DependentUpon>frmAddUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmChangePassword.resx">
       <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditFees.resx">
+      <DependentUpon>frmEditFees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditTestTypes.resx">
+      <DependentUpon>frmEditTestTypes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
@@ -143,6 +189,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMangeUsers.resx">
       <DependentUpon>frmMangeUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManageApplicationTypes.resx">
+      <DependentUpon>frmManageApplicationTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewLocalDrivingApplication.resx">
+      <DependentUpon>frmNewLocalDrivingApplication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTestTypes.resx">
+      <DependentUpon>frmTestTypes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MangePeople.resx">
       <DependentUpon>MangePeople.cs</DependentUpon>

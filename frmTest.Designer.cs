@@ -28,53 +28,66 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ctrlAddNew1 = new DVLD.ctrlAddNew();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.ctrlPersonCard1 = new DVLD.ctrlPersonCard();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.apToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lapToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ctrlPersonInfo1 = new DVLD.ctrlPersonInfo();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // ctrlAddNew1
+            // menuStrip1
             // 
-            this.ctrlAddNew1.Location = new System.Drawing.Point(26, 12);
-            this.ctrlAddNew1.Name = "ctrlAddNew1";
-            this.ctrlAddNew1.Size = new System.Drawing.Size(853, 467);
-            this.ctrlAddNew1.TabIndex = 0;
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.apToolStripMenuItem,
+            this.lapToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1218, 28);
+            this.menuStrip1.TabIndex = 0;
+            this.menuStrip1.Text = "menuStrip1";
             // 
-            // btnSave
+            // apToolStripMenuItem
             // 
-            this.btnSave.Location = new System.Drawing.Point(1091, 292);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(81, 60);
-            this.btnSave.TabIndex = 1;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
+            this.apToolStripMenuItem.Name = "apToolStripMenuItem";
+            this.apToolStripMenuItem.Size = new System.Drawing.Size(40, 24);
+            this.apToolStripMenuItem.Text = "ap";
             // 
-            // ctrlPersonCard1
+            // lapToolStripMenuItem
             // 
-            this.ctrlPersonCard1.AllowDrop = true;
-            this.ctrlPersonCard1.Location = new System.Drawing.Point(34, 20);
-            this.ctrlPersonCard1.Name = "ctrlPersonCard1";
-            this.ctrlPersonCard1.Size = new System.Drawing.Size(953, 317);
-            this.ctrlPersonCard1.TabIndex = 2;
+            this.lapToolStripMenuItem.Name = "lapToolStripMenuItem";
+            this.lapToolStripMenuItem.Size = new System.Drawing.Size(44, 24);
+            this.lapToolStripMenuItem.Text = "lap";
+            // 
+            // ctrlPersonInfo1
+            // 
+            this.ctrlPersonInfo1.Location = new System.Drawing.Point(12, 54);
+            this.ctrlPersonInfo1.Name = "ctrlPersonInfo1";
+            this.ctrlPersonInfo1.Size = new System.Drawing.Size(851, 366);
+            this.ctrlPersonInfo1.TabIndex = 1;
             // 
             // frmTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1218, 577);
-            this.Controls.Add(this.ctrlPersonCard1);
-            this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.ctrlAddNew1);
+            this.Controls.Add(this.ctrlPersonInfo1);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmTest";
             this.Text = "frmTest";
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private ctrlAddNew ctrlAddNew1;
-        private System.Windows.Forms.Button btnSave;
-        private ctrlPersonCard ctrlPersonCard1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem apToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem lapToolStripMenuItem;
+        private ctrlPersonInfo ctrlPersonInfo1;
     }
 }

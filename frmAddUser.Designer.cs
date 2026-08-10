@@ -218,7 +218,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(3, 236);
+            this.label6.Location = new System.Drawing.Point(27, 235);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(148, 18);
             this.label6.TabIndex = 8;
@@ -226,7 +226,7 @@
             // 
             // txtConfirmPassword
             // 
-            this.txtConfirmPassword.Location = new System.Drawing.Point(177, 233);
+            this.txtConfirmPassword.Location = new System.Drawing.Point(201, 232);
             this.txtConfirmPassword.Name = "txtConfirmPassword";
             this.txtConfirmPassword.PasswordChar = '*';
             this.txtConfirmPassword.Size = new System.Drawing.Size(184, 24);
@@ -235,7 +235,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(53, 184);
+            this.label5.Location = new System.Drawing.Point(77, 183);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(83, 18);
             this.label5.TabIndex = 6;
@@ -243,7 +243,7 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(177, 184);
+            this.txtPassword.Location = new System.Drawing.Point(201, 183);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(184, 24);
@@ -252,7 +252,7 @@
             // lblUserID
             // 
             this.lblUserID.AutoSize = true;
-            this.lblUserID.Location = new System.Drawing.Point(148, 73);
+            this.lblUserID.Location = new System.Drawing.Point(172, 72);
             this.lblUserID.Name = "lblUserID";
             this.lblUserID.Size = new System.Drawing.Size(44, 18);
             this.lblUserID.TabIndex = 4;
@@ -261,7 +261,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(53, 132);
+            this.label4.Location = new System.Drawing.Point(77, 131);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(93, 18);
             this.label4.TabIndex = 3;
@@ -269,7 +269,7 @@
             // 
             // txtUserName
             // 
-            this.txtUserName.Location = new System.Drawing.Point(177, 132);
+            this.txtUserName.Location = new System.Drawing.Point(201, 131);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(184, 24);
             this.txtUserName.TabIndex = 1;
@@ -277,7 +277,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(53, 73);
+            this.label3.Location = new System.Drawing.Point(77, 72);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(65, 18);
             this.label3.TabIndex = 1;
@@ -288,7 +288,7 @@
             this.chIsActive.AutoSize = true;
             this.chIsActive.Checked = true;
             this.chIsActive.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chIsActive.Location = new System.Drawing.Point(167, 279);
+            this.chIsActive.Location = new System.Drawing.Point(201, 278);
             this.chIsActive.Name = "chIsActive";
             this.chIsActive.Size = new System.Drawing.Size(93, 22);
             this.chIsActive.TabIndex = 0;

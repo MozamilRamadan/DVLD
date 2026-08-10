@@ -107,5 +107,10 @@ namespace DVLD
 
         }
 
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmAddNew frm = new frmAddNew(_PersonID);
+            frm.ShowDialog();
+        }
     }
 }

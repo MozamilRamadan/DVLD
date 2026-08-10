@@ -27,3 +27,9 @@ E:\DVLD\DVLD\DVLD\obj\Debug\DVLD.MangePeople.resources
 E:\DVLD\DVLD\DVLD\obj\Debug\DVLD.frmMangeUsers.resources
 E:\DVLD\DVLD\DVLD\obj\Debug\DVLD.frmAddUser.resources
 E:\DVLD\DVLD\DVLD\obj\Debug\DVLD.frmChangePassword.resources
+E:\DVLD\DVLD\DVLD\obj\Debug\DVLD.frmManageApplicationTypes.resources
+E:\DVLD\DVLD\DVLD\obj\Debug\DVLD.frmEditFees.resources
+E:\DVLD\DVLD\DVLD\obj\Debug\DVLD.frmTestTypes.resources
+E:\DVLD\DVLD\DVLD\obj\Debug\DVLD.frmEditTestTypes.resources
+E:\DVLD\DVLD\DVLD\obj\Debug\DVLD.ctrlPersonInfo.resources
+E:\DVLD\DVLD\DVLD\obj\Debug\DVLD.frmNewLocalDrivingApplication.resources
