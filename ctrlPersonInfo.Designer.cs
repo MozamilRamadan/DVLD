@@ -30,11 +30,11 @@
         {
             this.ctrlPersonCard1 = new DVLD.ctrlPersonCard();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.btnAddUser = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.cmFiltter = new System.Windows.Forms.ComboBox();
             this.txtSearch = new System.Windows.Forms.TextBox();
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.btnAddUser = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,6 +59,28 @@
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filtter";
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.BackgroundImage = global::DVLD.Properties.Resources.Mail;
+            this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSearch.Location = new System.Drawing.Point(453, 14);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(50, 34);
+            this.btnSearch.TabIndex = 16;
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // btnAddUser
+            // 
+            this.btnAddUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnAddUser.Image = global::DVLD.Properties.Resources.addPerson;
+            this.btnAddUser.Location = new System.Drawing.Point(520, 14);
+            this.btnAddUser.Name = "btnAddUser";
+            this.btnAddUser.Size = new System.Drawing.Size(50, 34);
+            this.btnAddUser.TabIndex = 15;
+            this.btnAddUser.UseVisualStyleBackColor = true;
+            this.btnAddUser.Click += new System.EventHandler(this.btnAddUser_Click);
             // 
             // label2
             // 
@@ -89,28 +111,6 @@
             this.txtSearch.TabIndex = 10;
             this.txtSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSearch_KeyPress);
             // 
-            // btnSearch
-            // 
-            this.btnSearch.BackgroundImage = global::DVLD.Properties.Resources.Mail;
-            this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnSearch.Location = new System.Drawing.Point(453, 14);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(50, 34);
-            this.btnSearch.TabIndex = 16;
-            this.btnSearch.UseVisualStyleBackColor = true;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
-            // btnAddUser
-            // 
-            this.btnAddUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnAddUser.Image = global::DVLD.Properties.Resources.addPerson;
-            this.btnAddUser.Location = new System.Drawing.Point(520, 14);
-            this.btnAddUser.Name = "btnAddUser";
-            this.btnAddUser.Size = new System.Drawing.Size(50, 34);
-            this.btnAddUser.TabIndex = 15;
-            this.btnAddUser.UseVisualStyleBackColor = true;
-            this.btnAddUser.Click += new System.EventHandler(this.btnAddUser_Click);
-            // 
             // ctrlPersonInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -118,7 +118,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.ctrlPersonCard1);
             this.Name = "ctrlPersonInfo";
-            this.Size = new System.Drawing.Size(870, 366);
+            this.Size = new System.Drawing.Size(768, 366);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

@@ -12,7 +12,8 @@ namespace DVLD
 {
     public partial class ctrlPersonInfo : UserControl
     {
-        int _PersonID = -1;
+        public int _PersonID = -1;
+        public string _NaNo = "";
         public ctrlPersonInfo()
         {
             InitializeComponent();
@@ -55,9 +56,11 @@ namespace DVLD
                 case "PersonID":
                     if (int.TryParse(txtSearch.Text, out int personID))
                         ctrlPersonCard1.LoadPersonInfo(personID);
+                    _PersonID = personID;
                     break;
                 case "NationalNo":
-                    ctrlPersonCard1.LoadPersonInfo(txtSearch.Text);
+                    _NaNo = txtSearch.Text;
+                    ctrlPersonCard1.LoadPersonInfo(_NaNo);
                     break;
 
 

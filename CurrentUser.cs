@@ -10,16 +10,16 @@ namespace DVLD
 {
     public static class clsCurrentUser
     {
-        public static clsUsers USER {  get; set; }
+        public static clsUsers _USER {  get; set; }
 
         public static bool IsLoggedIn
         {
-            get { return USER != null; }
+            get { return _USER != null; }
         }
 
         public static void LogeOut()
         {
-            USER = null;
+            _USER = null;
         }
     }
 }

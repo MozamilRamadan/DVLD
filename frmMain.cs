@@ -33,7 +33,7 @@ namespace DVLD
         private void showUserInfoToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-            int personID = clsCurrentUser.USER.PersonID;
+            int personID = clsCurrentUser._USER.PersonID;
 
             frmPersonCard card = new frmPersonCard(personID);
             card.Show();
@@ -42,7 +42,7 @@ namespace DVLD
         private void changePasswordToolStripMenuItem1_Click(object sender, EventArgs e)
         {
 
-            int personID = clsCurrentUser.USER.PersonID;
+            int personID = clsCurrentUser._USER.PersonID;
             frmChangePassword change = new frmChangePassword(personID);
             change.Show();
         }
@@ -73,6 +73,18 @@ namespace DVLD
         {
             MangePeople frm = new MangePeople();
 
+            frm.ShowDialog();
+        }
+
+        private void localLicensesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmNewLocalDrivingApplication frm = new frmNewLocalDrivingApplication();
+            frm.ShowDialog();
+        }
+
+        private void localDrivenLicensesApplicationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmLocalDrivingLicenseApplications frm = new frmLocalDrivingLicenseApplications();
             frm.ShowDialog();
         }
     }

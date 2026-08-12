@@ -259,7 +259,6 @@ namespace DVLD
             this.Close();
         }
 
-
         private void txbPhone_Validating(object sender, CancelEventArgs e)
         {
 
