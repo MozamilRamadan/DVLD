@@ -61,6 +61,7 @@ namespace DVLD
                 case "NationalNo":
                     _NaNo = txtSearch.Text;
                     ctrlPersonCard1.LoadPersonInfo(_NaNo);
+                    _PersonID = ctrlPersonCard1.PersonID;
                     break;
 
 

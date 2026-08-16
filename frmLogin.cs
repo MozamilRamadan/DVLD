@@ -21,6 +21,7 @@ namespace DVLD
         public frmLogin()
         {
             InitializeComponent();
+            this.MaximumSize = new Size(1100, 600);
         }
 
         private void frmLogin_Load(object sender, EventArgs e)
@@ -85,6 +86,7 @@ namespace DVLD
             //    errorProvider1.SetError(txtUserName, "");
             //}
         }
+
 
         private void txtPassword_Validating(object sender, CancelEventArgs e)
         {

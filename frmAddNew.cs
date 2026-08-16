@@ -101,10 +101,6 @@ namespace DVLD
         private void btnSave_Click(object sender, EventArgs e)
         {
 
-            MessageBox.Show(
-                $"PersonID = {_Person.PersonID}\n" +
-                    $"Mode = {_Person.Mode}");
-
             FillPerson();
 
             bool isValid = true;
@@ -122,7 +118,7 @@ namespace DVLD
 
             if (string.IsNullOrWhiteSpace(txtNaNo.Text))
             {
-                errorProvider1.SetError(txtNaNo, "Email is required!");
+                errorProvider1.SetError(txtNaNo, "National No is required!");
                 isValid = false;
             }
             else
@@ -133,23 +129,34 @@ namespace DVLD
             if (isValid)
             {
                 // proceed with saving
-                if (_Person.Save())
+                string nano = txtNaNo.Text;
+                if (clsPerson.IsPersonExist(nano) && isUdateMode == false)
                 {
-                   
-                    string Message = "", Title = "ADD NEW";
-                    if (isUdateMode)
+
+                    errorProvider1.SetError(txtNaNo, "National No Already Exist!");
+                    isValid = false;
+                    return;
+                }
+                else
+                {
+                    if (_Person.Save())
                     {
-                        Message = "Updated Successfuly";
-                        Title = "Update";
+
+                        string Message = "", Title = "ADD NEW";
+                        if (isUdateMode)
+                        {
+                            Message = "Updated Successfuly";
+                            Title = "Update";
+                        }
+                        else { Message = "Added Successfuly"; }
+                        MessageBox.Show(Message, Title, MessageBoxButtons.OKCancel);
+
+                        this.DialogResult = DialogResult.OK;
+
+                        DataBack?.Invoke(this);
+
+                        this.Close();
                     }
-                    else { Message = "Added Successfuly"; }
-                    MessageBox.Show(Message, Title, MessageBoxButtons.OKCancel);
-                   
-                    this.DialogResult = DialogResult.OK;
-
-                    DataBack?.Invoke(this);
-
-                    this.Close();
                 }
             }
 

@@ -53,8 +53,21 @@ namespace DVLD
             _applications = clsLocalDrivingLicenseApplications.Find(ID);
             if (_applications != null)
             {
-                MessageBox.Show(_applications.ClassName, "Name", MessageBoxButtons.OKCancel);
+                MessageBox.Show(_applications.ApplicantPersonID.ToString(), "Name", MessageBoxButtons.OKCancel);
             }
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            frmAddNewLocalDrivingApplication Add = new frmAddNewLocalDrivingApplication();
+
+            Add.DataBack += Add_DataBack;
+            Add.ShowDialog();
+        }
+
+        private void Add_DataBack(object sender)
+        {
+            FillInfo();
         }
     }
 }

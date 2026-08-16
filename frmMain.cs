@@ -22,6 +22,7 @@ namespace DVLD
         private void manageApplicationTypeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmManageApplicationTypes frmType = new frmManageApplicationTypes();
+            frmType.MdiParent = this;
             frmType.Show();
         }
 
@@ -36,6 +37,7 @@ namespace DVLD
             int personID = clsCurrentUser._USER.PersonID;
 
             frmPersonCard card = new frmPersonCard(personID);
+            card.MdiParent = this;
             card.Show();
         }
 
@@ -44,6 +46,7 @@ namespace DVLD
 
             int personID = clsCurrentUser._USER.PersonID;
             frmChangePassword change = new frmChangePassword(personID);
+            change.MdiParent = this;
             change.Show();
         }
 
@@ -59,6 +62,7 @@ namespace DVLD
         private void manageApplicationTypeToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             frmManageApplicationTypes frmApp = new frmManageApplicationTypes();
+            frmApp.MdiParent = this;
             frmApp.Show();
 
         }
@@ -66,26 +70,29 @@ namespace DVLD
         private void manageTestTypeToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             frmTestTypes frmTestTypes = new frmTestTypes();
+            frmTestTypes.MdiParent = this;
             frmTestTypes.Show();
         }
 
         private void peopToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MangePeople frm = new MangePeople();
-
-            frm.ShowDialog();
+            frm.MdiParent = this;
+            frm.Show();
         }
 
         private void localLicensesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmNewLocalDrivingApplication frm = new frmNewLocalDrivingApplication();
-            frm.ShowDialog();
+            frmAddNewLocalDrivingApplication frm = new frmAddNewLocalDrivingApplication();
+            frm.MdiParent = this;
+            frm.Show();
         }
 
         private void localDrivenLicensesApplicationToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmLocalDrivingLicenseApplications frm = new frmLocalDrivingLicenseApplications();
-            frm.ShowDialog();
+            frm.MdiParent = this;
+            frm.Show();
         }
     }
 }

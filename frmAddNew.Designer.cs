@@ -39,14 +39,12 @@
             this.cbCountry = new System.Windows.Forms.ComboBox();
             this.txtPhone = new System.Windows.Forms.MaskedTextBox();
             this.pbPersonImage = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.lbl = new System.Windows.Forms.Label();
             this.lbl6 = new System.Windows.Forms.Label();
             this.lbl10 = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.rdMale = new System.Windows.Forms.RadioButton();
             this.rdFemail = new System.Windows.Forms.RadioButton();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.lblMale = new System.Windows.Forms.Label();
             this.txtAddress = new System.Windows.Forms.RichTextBox();
             this.txtThirdName = new System.Windows.Forms.MaskedTextBox();
@@ -55,10 +53,6 @@
             this.txtNaNo = new System.Windows.Forms.MaskedTextBox();
             this.txtEmail = new System.Windows.Forms.MaskedTextBox();
             this.txtSecondName = new System.Windows.Forms.MaskedTextBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblName = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.lblNationalID = new System.Windows.Forms.Label();
@@ -66,12 +60,6 @@
             this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPersonImage)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // errorProvider1
@@ -92,7 +80,6 @@
             // btnCancel
             // 
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Image = global::DVLD.Properties.Resources.close;
             this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCancel.Location = new System.Drawing.Point(535, 361);
             this.btnCancel.Name = "btnCancel";
@@ -162,23 +149,12 @@
             // 
             // pbPersonImage
             // 
-            this.pbPersonImage.Image = global::DVLD.Properties.Resources.Mail;
             this.pbPersonImage.Location = new System.Drawing.Point(651, 97);
             this.pbPersonImage.Name = "pbPersonImage";
             this.pbPersonImage.Size = new System.Drawing.Size(163, 164);
             this.pbPersonImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbPersonImage.TabIndex = 88;
             this.pbPersonImage.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::DVLD.Properties.Resources.Phone;
-            this.pictureBox6.Location = new System.Drawing.Point(426, 161);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(27, 24);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 87;
-            this.pictureBox6.TabStop = false;
             // 
             // lbl
             // 
@@ -238,16 +214,6 @@
             this.rdFemail.Text = "Femail";
             this.rdFemail.UseVisualStyleBackColor = true;
             // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::DVLD.Properties.Resources.Female;
-            this.pictureBox5.Location = new System.Drawing.Point(225, 159);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(27, 24);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 81;
-            this.pictureBox5.TabStop = false;
-            // 
             // lblMale
             // 
             this.lblMale.AutoSize = true;
@@ -306,47 +272,7 @@
             this.txtSecondName.Location = new System.Drawing.Point(321, 69);
             this.txtSecondName.Name = "txtSecondName";
             this.txtSecondName.Size = new System.Drawing.Size(159, 22);
-            this.txtSecondName.TabIndex = 74;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::DVLD.Properties.Resources.Mail;
-            this.pictureBox4.Location = new System.Drawing.Point(108, 237);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(27, 24);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 73;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::DVLD.Properties.Resources.email;
-            this.pictureBox3.Location = new System.Drawing.Point(87, 196);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(27, 24);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 72;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::DVLD.Properties.Resources.Mail;
-            this.pictureBox2.Location = new System.Drawing.Point(125, 159);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(27, 24);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 71;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::DVLD.Properties.Resources.Person;
-            this.pictureBox1.Location = new System.Drawing.Point(87, 66);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(29, 32);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 70;
-            this.pictureBox1.TabStop = false;
+            this.txtSecondName.TabIndex = 94;
             // 
             // lblName
             // 
@@ -408,13 +334,11 @@
             this.Controls.Add(this.cbCountry);
             this.Controls.Add(this.txtPhone);
             this.Controls.Add(this.pbPersonImage);
-            this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.lbl);
             this.Controls.Add(this.lbl6);
             this.Controls.Add(this.lbl10);
             this.Controls.Add(this.rdMale);
             this.Controls.Add(this.rdFemail);
-            this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.lblMale);
             this.Controls.Add(this.txtAddress);
             this.Controls.Add(this.txtThirdName);
@@ -423,10 +347,6 @@
             this.Controls.Add(this.txtNaNo);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.txtSecondName);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.lblNationalID);
@@ -441,12 +361,6 @@
             this.Load += new System.EventHandler(this.frmAddNew_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPersonImage)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -463,13 +377,11 @@
         private System.Windows.Forms.ComboBox cbCountry;
         private System.Windows.Forms.MaskedTextBox txtPhone;
         private System.Windows.Forms.PictureBox pbPersonImage;
-        private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label lbl;
         private System.Windows.Forms.Label lbl6;
         private System.Windows.Forms.Label lbl10;
         private System.Windows.Forms.RadioButton rdMale;
         private System.Windows.Forms.RadioButton rdFemail;
-        private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label lblMale;
         private System.Windows.Forms.RichTextBox txtAddress;
         private System.Windows.Forms.MaskedTextBox txtThirdName;
@@ -478,10 +390,6 @@
         private System.Windows.Forms.MaskedTextBox txtNaNo;
         private System.Windows.Forms.MaskedTextBox txtEmail;
         private System.Windows.Forms.MaskedTextBox txtSecondName;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblNationalID;

@@ -32,5 +32,5 @@ E:\DVLD\DVLD\DVLD\obj\Debug\DVLD.frmEditFees.resources
 E:\DVLD\DVLD\DVLD\obj\Debug\DVLD.frmTestTypes.resources
 E:\DVLD\DVLD\DVLD\obj\Debug\DVLD.frmEditTestTypes.resources
 E:\DVLD\DVLD\DVLD\obj\Debug\DVLD.ctrlPersonInfo.resources
-E:\DVLD\DVLD\DVLD\obj\Debug\DVLD.frmNewLocalDrivingApplication.resources
 E:\DVLD\DVLD\DVLD\obj\Debug\DVLD.frmLocalDrivingLicenseApplications.resources
+E:\DVLD\DVLD\DVLD\obj\Debug\DVLD.frmAddNewLocalDrivingApplication.resources
