@@ -65,14 +65,14 @@ namespace DVLD
         private void rdMale_CheckedChanged(object sender, EventArgs e)
         {
             if (rdMale.Checked)
-                pbPersonImage.Image = Resources.Mail;
+                pbPersonImage.Image = Resources.Man32;
         }
 
         private void rdFemail_CheckedChanged(object sender, EventArgs e)
         {
             if (rdFemail.Checked)
             {
-                pbPersonImage.Image = Resources.Female;
+                pbPersonImage.Image = Resources.Woman32;
             }
         }
 

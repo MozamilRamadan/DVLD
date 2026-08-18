@@ -266,7 +266,7 @@
             // 
             // pbPersonImage
             // 
-            this.pbPersonImage.Image = global::DVLD.Properties.Resources.Mail;
+            this.pbPersonImage.Image = global::DVLD.Properties.Resources.Man32;
             this.pbPersonImage.Location = new System.Drawing.Point(658, 53);
             this.pbPersonImage.Name = "pbPersonImage";
             this.pbPersonImage.Size = new System.Drawing.Size(163, 164);
@@ -276,7 +276,7 @@
             // 
             // pictureBox6
             // 
-            this.pictureBox6.Image = global::DVLD.Properties.Resources.Phone;
+            this.pictureBox6.Image = global::DVLD.Properties.Resources.Phone_32;
             this.pictureBox6.Location = new System.Drawing.Point(433, 117);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(27, 24);
@@ -286,7 +286,7 @@
             // 
             // pictureBox5
             // 
-            this.pictureBox5.Image = global::DVLD.Properties.Resources.Female;
+            this.pictureBox5.Image = global::DVLD.Properties.Resources.Woman32;
             this.pictureBox5.Location = new System.Drawing.Point(232, 115);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(27, 24);
@@ -296,7 +296,7 @@
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Image = global::DVLD.Properties.Resources.Mail;
+            this.pictureBox4.Image = global::DVLD.Properties.Resources.Man32;
             this.pictureBox4.Location = new System.Drawing.Point(115, 193);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(27, 24);
@@ -306,7 +306,7 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = global::DVLD.Properties.Resources.email;
+            this.pictureBox3.Image = global::DVLD.Properties.Resources.Email_32;
             this.pictureBox3.Location = new System.Drawing.Point(94, 152);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(27, 24);
@@ -316,7 +316,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::DVLD.Properties.Resources.Mail;
+            this.pictureBox2.Image = global::DVLD.Properties.Resources.Man32;
             this.pictureBox2.Location = new System.Drawing.Point(132, 115);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(27, 24);
@@ -326,7 +326,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::DVLD.Properties.Resources.Person;
+            this.pictureBox1.Image = global::DVLD.Properties.Resources.Person32;
             this.pictureBox1.Location = new System.Drawing.Point(94, 22);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(29, 32);

@@ -74,6 +74,11 @@ namespace DVLD
             }
         }
 
+        private void frmAddNewLocalDrivingApplication_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void btnSave_Click(object sender, EventArgs e)
         {
             byte AppStatus = Convert.ToByte(_status = enStatus.New);

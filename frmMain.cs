@@ -43,7 +43,6 @@ namespace DVLD
 
         private void changePasswordToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-
             int personID = clsCurrentUser._USER.PersonID;
             frmChangePassword change = new frmChangePassword(personID);
             change.MdiParent = this;
@@ -91,6 +90,13 @@ namespace DVLD
         private void localDrivenLicensesApplicationToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmLocalDrivingLicenseApplications frm = new frmLocalDrivingLicenseApplications();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void usersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmMangeUsers frm = new frmMangeUsers();
             frm.MdiParent = this;
             frm.Show();
         }

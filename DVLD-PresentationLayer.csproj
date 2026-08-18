@@ -131,6 +131,12 @@
     <Compile Include="frmAddNewLocalDrivingApplication.Designer.cs">
       <DependentUpon>frmAddNewLocalDrivingApplication.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTest.Designer.cs">
+      <DependentUpon>frmTest.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmTestTypes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,12 +160,6 @@
     </Compile>
     <Compile Include="frmPersonCard.Designer.cs">
       <DependentUpon>frmPersonCard.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmTest.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmTest.Designer.cs">
-      <DependentUpon>frmTest.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -205,6 +205,9 @@
     <EmbeddedResource Include="frmAddNewLocalDrivingApplication.resx">
       <DependentUpon>frmAddNewLocalDrivingApplication.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmTest.resx">
+      <DependentUpon>frmTest.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmTestTypes.resx">
       <DependentUpon>frmTestTypes.cs</DependentUpon>
     </EmbeddedResource>
@@ -217,12 +220,8 @@
     <EmbeddedResource Include="frmPersonCard.resx">
       <DependentUpon>frmPersonCard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmTest.resx">
-      <DependentUpon>frmTest.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
@@ -244,61 +243,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Person.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Mail.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\email.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Phone.png" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\DVLD-BusinessLayer\DVLD-BusinessLayer.csproj">
       <Project>{12e3d7e2-296a-486c-ae16-2696ffa099fe}</Project>
       <Name>DVLD-BusinessLayer</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Female.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\addPerson.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cancle.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\close.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Close 32.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Save 32.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Calendar 32.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\money 32.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\User 32 -2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\LocalDriving License.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Welcome.jfif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Password 32.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\sign_in 32.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\People 64.png" />
@@ -316,7 +264,85 @@
     <None Include="Resources\account_settings 64.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Driver License 48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Manage Applications 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Detained Driving License 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ApplicationType.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Test Type 64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Man32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Person32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add Person 40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Woman32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Phone 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Email 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Welcome.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sign_in 32.png" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\People 400.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddPerson 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Country 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Address 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Number 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Next 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SearchPerson.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Password 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add New User 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Users 2 400.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New Driving License 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Applications.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -70,12 +70,12 @@ namespace DVLD
             lblNaionalNo.Text = _Person.NationalNo;
             if (_Person.Gendor == 0)
             {
-                pictureBox2.Image = Resources.Mail;
+                pictureBox2.Image = Resources.Man32;
                 lblGendor.Text = "Male";
             }
             else
             {
-                pictureBox2.Image = Resources.Female;
+                pictureBox2.Image = Resources.Woman32;
                 lblGendor.Text = "Female";
             }
             lblEmail.Text = _Person.Email;

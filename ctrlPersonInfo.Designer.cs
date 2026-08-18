@@ -62,7 +62,7 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.BackgroundImage = global::DVLD.Properties.Resources.Mail;
+            this.btnSearch.BackgroundImage = global::DVLD.Properties.Resources.Man32;
             this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnSearch.Location = new System.Drawing.Point(453, 14);
             this.btnSearch.Name = "btnSearch";
@@ -74,7 +74,7 @@
             // btnAddUser
             // 
             this.btnAddUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnAddUser.Image = global::DVLD.Properties.Resources.addPerson;
+            this.btnAddUser.Image = global::DVLD.Properties.Resources.Add_Person_40;
             this.btnAddUser.Location = new System.Drawing.Point(520, 14);
             this.btnAddUser.Name = "btnAddUser";
             this.btnAddUser.Size = new System.Drawing.Size(50, 34);

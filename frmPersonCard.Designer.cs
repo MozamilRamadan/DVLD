@@ -36,14 +36,14 @@
             this.ctrlPersonCard1.AllowDrop = true;
             this.ctrlPersonCard1.Location = new System.Drawing.Point(0, 0);
             this.ctrlPersonCard1.Name = "ctrlPersonCard1";
-            this.ctrlPersonCard1.Size = new System.Drawing.Size(953, 317);
+            this.ctrlPersonCard1.Size = new System.Drawing.Size(776, 317);
             this.ctrlPersonCard1.TabIndex = 0;
             // 
             // frmPersonCard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(981, 392);
+            this.ClientSize = new System.Drawing.Size(788, 332);
             this.Controls.Add(this.ctrlPersonCard1);
             this.Name = "frmPersonCard";
             this.Text = "frmPersonCard";

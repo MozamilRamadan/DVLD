@@ -28,66 +28,44 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.apToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lapToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ctrlPersonInfo1 = new DVLD.ctrlPersonInfo();
-            this.menuStrip1.SuspendLayout();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // menuStrip1
+            // dateTimePicker1
             // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.apToolStripMenuItem,
-            this.lapToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1218, 28);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
+            this.dateTimePicker1.Location = new System.Drawing.Point(428, 137);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePicker1.TabIndex = 1;
             // 
-            // apToolStripMenuItem
+            // pictureBox1
             // 
-            this.apToolStripMenuItem.Name = "apToolStripMenuItem";
-            this.apToolStripMenuItem.Size = new System.Drawing.Size(40, 24);
-            this.apToolStripMenuItem.Text = "ap";
-            // 
-            // lapToolStripMenuItem
-            // 
-            this.lapToolStripMenuItem.Name = "lapToolStripMenuItem";
-            this.lapToolStripMenuItem.Size = new System.Drawing.Size(44, 24);
-            this.lapToolStripMenuItem.Text = "lap";
-            // 
-            // ctrlPersonInfo1
-            // 
-            this.ctrlPersonInfo1.Location = new System.Drawing.Point(12, 54);
-            this.ctrlPersonInfo1.Name = "ctrlPersonInfo1";
-            this.ctrlPersonInfo1.Size = new System.Drawing.Size(851, 366);
-            this.ctrlPersonInfo1.TabIndex = 1;
+            this.pictureBox1.Image = global::DVLD.Properties.Resources.Email_32;
+            this.pictureBox1.Location = new System.Drawing.Point(60, 48);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // frmTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1218, 577);
-            this.Controls.Add(this.ctrlPersonInfo1);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
+            this.ClientSize = new System.Drawing.Size(867, 559);
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.pictureBox1);
             this.Name = "frmTest";
             this.Text = "frmTest";
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem apToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem lapToolStripMenuItem;
-        private ctrlPersonInfo ctrlPersonInfo1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

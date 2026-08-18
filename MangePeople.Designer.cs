@@ -115,6 +115,7 @@
             // btnAdd
             // 
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.Image = global::DVLD.Properties.Resources.AddPerson_32;
             this.btnAdd.Location = new System.Drawing.Point(1088, 138);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(58, 52);
@@ -191,6 +192,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Image = global::DVLD.Properties.Resources.People_400;
             this.pictureBox1.Location = new System.Drawing.Point(444, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(149, 99);

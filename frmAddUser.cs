@@ -30,7 +30,7 @@ namespace DVLD
                 if (_person != null)
                 {
                     _IsUpdateMode = true;
-                    ctrlPersonCard1.LoadPersonInfo(ID);
+                    ctrlPersonCard2.LoadPersonInfo(ID);
                     cmFiltter.Enabled = false;
                     txtSearch.Enabled = false;
                     _User = clsUsers.FindByPersonID(ID);
@@ -107,23 +107,6 @@ namespace DVLD
         }
 
 
-        private void btnNext_Click(object sender, EventArgs e)
-        {
-            if (_IsUpdateMode)
-            {
-                tabControl1.SelectedIndex++;
-            }
-            else
-            {
-                clsUsers user = clsUsers.FindByPersonID(Convert.ToInt32(txtSearch.Text));
-
-                if (user != null)
-                    MessageBox.Show("This User Exist", "Error");
-                else
-                    tabControl1.SelectedIndex++;
-            }
-        }
-
         private void frmAddUser_Load(object sender, EventArgs e)
         {
             LaodAllPeople();
@@ -164,7 +147,7 @@ namespace DVLD
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            ctrlPersonCard1.LoadPersonInfo(Convert.ToInt32(txtSearch.Text));
+            ctrlPersonCard2.LoadPersonInfo(Convert.ToInt32(txtSearch.Text));
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -207,9 +190,31 @@ namespace DVLD
 
         }
 
-        private void btnCancel_Click(object sender, EventArgs e)
+        private void btnNext_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (_IsUpdateMode)
+            {
+                tabControl1.SelectedIndex++;
+            }
+            else
+            {
+                clsUsers user = clsUsers.FindByPersonID(Convert.ToInt32(txtSearch.Text));
+
+                if (user != null)
+                    MessageBox.Show("This User Exist", "Error");
+                else
+                    tabControl2.SelectedIndex++;
+            }
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+
         }
 
     }

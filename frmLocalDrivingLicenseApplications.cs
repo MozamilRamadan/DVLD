@@ -15,6 +15,7 @@ namespace DVLD
     {
         DataTable _dt;
         clsLocalDrivingLicenseApplications _applications;
+        int _ID;
         public frmLocalDrivingLicenseApplications()
         {
             InitializeComponent();
@@ -49,8 +50,8 @@ namespace DVLD
 
         private void tsmShowDetails_Click(object sender, EventArgs e)
         {
-            int ID = 30;
-            _applications = clsLocalDrivingLicenseApplications.Find(ID);
+             _ID = Convert.ToInt32(dataGridView1.CurrentRow.Cells["LocalDrivingLicenseApplicationID"].Value);
+            _applications = clsLocalDrivingLicenseApplications.Find(_ID);
             if (_applications != null)
             {
                 MessageBox.Show(_applications.ApplicantPersonID.ToString(), "Name", MessageBoxButtons.OKCancel);
@@ -68,6 +69,11 @@ namespace DVLD
         private void Add_DataBack(object sender)
         {
             FillInfo();
+        }
+
+        private void editToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
