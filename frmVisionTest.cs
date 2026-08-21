@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace DVLD
 {
-    public partial class frmTest : Form
+    public partial class frmVisionTest : Form
     {
-        public frmTest()
+        public frmVisionTest()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            ctrlApplicationDetails app = new ctrlApplicationDetails(1);
-            app.Show();
         }
     }
 }

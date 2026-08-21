@@ -51,11 +51,8 @@ namespace DVLD
         private void tsmShowDetails_Click(object sender, EventArgs e)
         {
              _ID = Convert.ToInt32(dataGridView1.CurrentRow.Cells["LocalDrivingLicenseApplicationID"].Value);
-            _applications = clsLocalDrivingLicenseApplications.Find(_ID);
-            if (_applications != null)
-            {
-                MessageBox.Show(_applications.ApplicantPersonID.ToString(), "Name", MessageBoxButtons.OKCancel);
-            }
+            frmLocalDrinvingApplicationInfo frm = new frmLocalDrinvingApplicationInfo(_ID);
+            frm.Show();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -74,6 +71,13 @@ namespace DVLD
         private void editToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void sechduleVissionTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _ID = Convert.ToInt32(dataGridView1.CurrentRow.Cells["LocalDrivingLicenseApplicationID"].Value);
+            frmSchedualVissionTest frm = new frmSchedualVissionTest(_ID);
+            frm.Show();
         }
     }
 }

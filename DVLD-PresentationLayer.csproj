@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="crtlAppDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="crtlAppDetails.Designer.cs">
+      <DependentUpon>crtlAppDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="ctrlAddNew.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -57,6 +63,12 @@
     </Compile>
     <Compile Include="Calc.Designer.cs">
       <DependentUpon>Calc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ctrlApplicationDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ctrlApplicationDetails.Designer.cs">
+      <DependentUpon>ctrlApplicationDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="ctrlPersonCard.cs">
       <SubType>UserControl</SubType>
@@ -95,6 +107,12 @@
     <Compile Include="frmEditTestTypes.Designer.cs">
       <DependentUpon>frmEditTestTypes.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmLocalDrinvingApplicationInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLocalDrinvingApplicationInfo.Designer.cs">
+      <DependentUpon>frmLocalDrinvingApplicationInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLocalDrivingLicenseApplications.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,17 +149,41 @@
     <Compile Include="frmAddNewLocalDrivingApplication.Designer.cs">
       <DependentUpon>frmAddNewLocalDrivingApplication.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmSchedualTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSchedualTest.Designer.cs">
+      <DependentUpon>frmSchedualTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSchedualVissionTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSchedualVissionTest.Designer.cs">
+      <DependentUpon>frmSchedualVissionTest.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmTest.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmTest.Designer.cs">
       <DependentUpon>frmTest.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTest2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTest2.Designer.cs">
+      <DependentUpon>frmTest2.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmTestTypes.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmTestTypes.Designer.cs">
       <DependentUpon>frmTestTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVisionTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVisionTest.Designer.cs">
+      <DependentUpon>frmVisionTest.cs</DependentUpon>
     </Compile>
     <Compile Include="MangePeople.cs">
       <SubType>Form</SubType>
@@ -163,11 +205,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="crtlAppDetails.resx">
+      <DependentUpon>crtlAppDetails.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ctrlAddNew.resx">
       <DependentUpon>ctrlAddNew.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Calc.resx">
       <DependentUpon>Calc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ctrlApplicationDetails.resx">
+      <DependentUpon>ctrlApplicationDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ctrlPersonCard.resx">
       <DependentUpon>ctrlPersonCard.cs</DependentUpon>
@@ -187,6 +235,9 @@
     <EmbeddedResource Include="frmEditTestTypes.resx">
       <DependentUpon>frmEditTestTypes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmLocalDrinvingApplicationInfo.resx">
+      <DependentUpon>frmLocalDrinvingApplicationInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLocalDrivingLicenseApplications.resx">
       <DependentUpon>frmLocalDrivingLicenseApplications.cs</DependentUpon>
     </EmbeddedResource>
@@ -205,11 +256,20 @@
     <EmbeddedResource Include="frmAddNewLocalDrivingApplication.resx">
       <DependentUpon>frmAddNewLocalDrivingApplication.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmSchedualTest.resx">
+      <DependentUpon>frmSchedualTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSchedualVissionTest.resx">
+      <DependentUpon>frmSchedualVissionTest.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmTest.resx">
       <DependentUpon>frmTest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTestTypes.resx">
       <DependentUpon>frmTestTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVisionTest.resx">
+      <DependentUpon>frmVisionTest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MangePeople.resx">
       <DependentUpon>MangePeople.cs</DependentUpon>
@@ -343,6 +403,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Applications.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vision Test Schdule.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vision 512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Local 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Schedule Test 512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Schedule Test 5121.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calendar 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Count 32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
