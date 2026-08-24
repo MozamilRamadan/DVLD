@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DVLD_BusinessLayer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,11 +19,14 @@ namespace DVLD
             InitializeComponent();
             _ID = id;
             ctrlApplicationDetails1 = new ctrlApplicationDetails(id);
+            DataTable dt = clsTestAppointment.GetAllTestAppointment();
+            dataGridView1.DataSource = dt;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
         private void btnLocal_Click(object sender, EventArgs e)
         {
-            frmSchedualTest frm = new frmSchedualTest();
+            frmSchedualTest frm = new frmSchedualTest(_ID);
             frm.ShowDialog();
         }
     }

@@ -46,9 +46,9 @@
             this.label1.ForeColor = System.Drawing.Color.Red;
             this.label1.Location = new System.Drawing.Point(287, 122);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(236, 25);
+            this.label1.Size = new System.Drawing.Size(248, 25);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Vision Test Apointment";
+            this.label1.Text = "Vision Test Appointment";
             // 
             // ctrlApplicationDetails1
             // 
@@ -61,7 +61,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 462);
+            this.label2.Location = new System.Drawing.Point(12, 450);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(101, 18);
             this.label2.TabIndex = 3;
@@ -103,11 +103,11 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 499);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 484);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(749, 138);
+            this.dataGridView1.Size = new System.Drawing.Size(749, 153);
             this.dataGridView1.TabIndex = 8;
             // 
             // frmSchedualVissionTest

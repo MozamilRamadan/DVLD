@@ -19,6 +19,7 @@ namespace DVLD
         {
             InitializeComponent();
             _LDAppID = id;
+            FillData();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -28,11 +29,16 @@ namespace DVLD
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-
+            LoadData();
         }
         void LoadData()
         {
-
+            _tp.LocalDrivingLicenseApplicationID = _LDAppID;
+            _tp.CreatedByUserID = clsCurrentUser._USER.UserID;
+            _tp.PaidFees = 10;
+            _tp.AppointmentDate = DTPicker.Value;
+            _tp.TestTypeID = 1;
+            _tp.IsLocked = true;
         }
 
         void FillData()
