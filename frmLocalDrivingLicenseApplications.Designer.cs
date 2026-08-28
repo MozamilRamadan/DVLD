@@ -30,14 +30,14 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ContextMenuFormat = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.cmFormat = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tsmShowDetails = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.cancelAppToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
-            this.scheduleTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.scheduleTestTSMI = new System.Windows.Forms.ToolStripMenuItem();
             this.sechduleVissionTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sechduleWriteTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sechduleStrretTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -56,7 +56,7 @@
             this.btnAdd = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.ContextMenuFormat.SuspendLayout();
+            this.cmFormat.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,7 +65,7 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToResizeColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.ContextMenuStrip = this.ContextMenuFormat;
+            this.dataGridView1.ContextMenuStrip = this.cmFormat;
             this.dataGridView1.Location = new System.Drawing.Point(43, 231);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
@@ -73,25 +73,25 @@
             this.dataGridView1.Size = new System.Drawing.Size(1072, 254);
             this.dataGridView1.TabIndex = 18;
             // 
-            // ContextMenuFormat
+            // cmFormat
             // 
-            this.ContextMenuFormat.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.ContextMenuFormat.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cmFormat.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.cmFormat.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmShowDetails,
             this.editToolStripMenuItem,
             this.deleteToolStripMenuItem,
             this.toolStripMenuItem1,
             this.cancelAppToolStripMenuItem,
             this.toolStripMenuItem2,
-            this.scheduleTestToolStripMenuItem,
+            this.scheduleTestTSMI,
             this.toolStripMenuItem3,
             this.issuesDrivingLicenseFirstTimeToolStripMenuItem,
             this.toolStripMenuItem4,
             this.showLicenseToolStripMenuItem,
             this.toolStripMenuItem5,
             this.showPersonLicensessHistoryToolStripMenuItem});
-            this.ContextMenuFormat.Name = "ContextMenuFormat";
-            this.ContextMenuFormat.Size = new System.Drawing.Size(291, 254);
+            this.cmFormat.Name = "ContextMenuFormat";
+            this.cmFormat.Size = new System.Drawing.Size(291, 254);
             // 
             // tsmShowDetails
             // 
@@ -129,15 +129,16 @@
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
             this.toolStripMenuItem2.Size = new System.Drawing.Size(287, 6);
             // 
-            // scheduleTestToolStripMenuItem
+            // scheduleTestTSMI
             // 
-            this.scheduleTestToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.scheduleTestTSMI.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.sechduleVissionTestToolStripMenuItem,
             this.sechduleWriteTestToolStripMenuItem,
             this.sechduleStrretTestToolStripMenuItem});
-            this.scheduleTestToolStripMenuItem.Name = "scheduleTestToolStripMenuItem";
-            this.scheduleTestToolStripMenuItem.Size = new System.Drawing.Size(290, 24);
-            this.scheduleTestToolStripMenuItem.Text = "Sechdule Test";
+            this.scheduleTestTSMI.Name = "scheduleTestTSMI";
+            this.scheduleTestTSMI.Size = new System.Drawing.Size(290, 24);
+            this.scheduleTestTSMI.Text = "Sechdule Test";
+            this.scheduleTestTSMI.DropDownOpening += new System.EventHandler(this.scheduleTestTSMI_DropDownOpening);
             // 
             // sechduleVissionTestToolStripMenuItem
             // 
@@ -151,12 +152,14 @@
             this.sechduleWriteTestToolStripMenuItem.Name = "sechduleWriteTestToolStripMenuItem";
             this.sechduleWriteTestToolStripMenuItem.Size = new System.Drawing.Size(226, 26);
             this.sechduleWriteTestToolStripMenuItem.Text = "sechdule Write Test";
+            this.sechduleWriteTestToolStripMenuItem.Click += new System.EventHandler(this.sechduleWriteTestToolStripMenuItem_Click);
             // 
             // sechduleStrretTestToolStripMenuItem
             // 
             this.sechduleStrretTestToolStripMenuItem.Name = "sechduleStrretTestToolStripMenuItem";
             this.sechduleStrretTestToolStripMenuItem.Size = new System.Drawing.Size(226, 26);
             this.sechduleStrretTestToolStripMenuItem.Text = "sechdule Street Test";
+            this.sechduleStrretTestToolStripMenuItem.Click += new System.EventHandler(this.sechduleStrretTestToolStripMenuItem_Click);
             // 
             // toolStripMenuItem3
             // 
@@ -193,15 +196,17 @@
             // 
             // button2
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Image = global::DVLD.Properties.Resources.Close_32;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(1002, 494);
+            this.button2.Location = new System.Drawing.Point(997, 494);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(113, 32);
+            this.button2.Size = new System.Drawing.Size(118, 43);
             this.button2.TabIndex = 17;
             this.button2.Text = "cancel";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // lblRecords
             // 
@@ -277,7 +282,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1127, 539);
+            this.ClientSize = new System.Drawing.Size(1127, 549);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.lblRecords);
@@ -290,7 +295,7 @@
             this.Name = "frmLocalDrivingLicenseApplications";
             this.Text = "frmLocalDrivingLicenseApplications";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.ContextMenuFormat.ResumeLayout(false);
+            this.cmFormat.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -300,7 +305,7 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.ContextMenuStrip ContextMenuFormat;
+        private System.Windows.Forms.ContextMenuStrip cmFormat;
         private System.Windows.Forms.ToolStripMenuItem tsmShowDetails;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
@@ -315,7 +320,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem scheduleTestToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem scheduleTestTSMI;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem issuesDrivingLicenseFirstTimeToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem4;

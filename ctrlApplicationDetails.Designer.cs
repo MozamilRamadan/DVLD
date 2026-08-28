@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.ctrlPersonCard1 = new DVLD.ctrlPersonCard();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.lblTest = new System.Windows.Forms.Label();
@@ -61,7 +62,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.ctrlPersonCard1 = new DVLD.ctrlPersonCard();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -84,6 +84,15 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Driving License Application Info";
+            // 
+            // ctrlPersonCard1
+            // 
+            this.ctrlPersonCard1.AllowDrop = true;
+            this.ctrlPersonCard1.Location = new System.Drawing.Point(-3, -3);
+            this.ctrlPersonCard1.Name = "ctrlPersonCard1";
+            this.ctrlPersonCard1.Size = new System.Drawing.Size(770, 303);
+            this.ctrlPersonCard1.TabIndex = 21;
+            this.ctrlPersonCard1.Visible = false;
             // 
             // button2
             // 
@@ -221,7 +230,7 @@
             // 
             this.lblCreateBy.AutoSize = true;
             this.lblCreateBy.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCreateBy.Location = new System.Drawing.Point(510, 86);
+            this.lblCreateBy.Location = new System.Drawing.Point(550, 76);
             this.lblCreateBy.Name = "lblCreateBy";
             this.lblCreateBy.Size = new System.Drawing.Size(54, 18);
             this.lblCreateBy.TabIndex = 10;
@@ -231,7 +240,7 @@
             // 
             this.lblStatusDate.AutoSize = true;
             this.lblStatusDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStatusDate.Location = new System.Drawing.Point(510, 55);
+            this.lblStatusDate.Location = new System.Drawing.Point(550, 45);
             this.lblStatusDate.Name = "lblStatusDate";
             this.lblStatusDate.Size = new System.Drawing.Size(54, 18);
             this.lblStatusDate.TabIndex = 19;
@@ -241,7 +250,7 @@
             // 
             this.lblDate.AutoSize = true;
             this.lblDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDate.Location = new System.Drawing.Point(510, 28);
+            this.lblDate.Location = new System.Drawing.Point(550, 18);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(54, 18);
             this.lblDate.TabIndex = 18;
@@ -346,7 +355,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(402, 86);
+            this.label13.Location = new System.Drawing.Point(442, 76);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(92, 18);
             this.label13.TabIndex = 8;
@@ -356,7 +365,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(384, 55);
+            this.label12.Location = new System.Drawing.Point(424, 45);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(110, 18);
             this.label12.TabIndex = 7;
@@ -366,7 +375,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(441, 28);
+            this.label11.Location = new System.Drawing.Point(481, 18);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(53, 18);
             this.label11.TabIndex = 6;
@@ -421,15 +430,6 @@
             this.label3.Size = new System.Drawing.Size(34, 18);
             this.label3.TabIndex = 1;
             this.label3.Text = "ID :";
-            // 
-            // ctrlPersonCard1
-            // 
-            this.ctrlPersonCard1.AllowDrop = true;
-            this.ctrlPersonCard1.Location = new System.Drawing.Point(156, -21);
-            this.ctrlPersonCard1.Name = "ctrlPersonCard1";
-            this.ctrlPersonCard1.Size = new System.Drawing.Size(770, 303);
-            this.ctrlPersonCard1.TabIndex = 21;
-            this.ctrlPersonCard1.Visible = false;
             // 
             // ctrlApplicationDetails
             // 

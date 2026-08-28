@@ -10,20 +10,20 @@ namespace DVLD
         enum enAppStauts { New = 1, Cancled = 2, Complete = 3 };
         enAppStauts stauts;
         clsLocalDrivingLicenseApplications _application;
+        //public ctrlApplicationDetails()
+        //{
+        //    InitializeComponent();
+        //}
         public ctrlApplicationDetails()
         {
             InitializeComponent();
-        }
-        public ctrlApplicationDetails(int id)
-        {
-            InitializeComponent();
 
-            _LDAID = id;
             LoadInfo();
         }
 
-        public void LoadInfo()
+        public void LoadInfo(int id = -1)
         {
+            _LDAID = id;
             _application = clsLocalDrivingLicenseApplications.Find(_LDAID);
             if (_application != null)
             {

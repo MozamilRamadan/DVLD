@@ -76,8 +76,51 @@ namespace DVLD
         private void sechduleVissionTestToolStripMenuItem_Click(object sender, EventArgs e)
         {
             _ID = Convert.ToInt32(dataGridView1.CurrentRow.Cells["LocalDrivingLicenseApplicationID"].Value);
-            frmSchedualVissionTest frm = new frmSchedualVissionTest(_ID);
+            int TestTypeID = 1;
+            frmSchedualVissionTest frm = new frmSchedualVissionTest(_ID, TestTypeID);
             frm.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+
+        private void scheduleTestTSMI_DropDownOpening(object sender, EventArgs e)
+        {
+            int localAppID = Convert.ToInt32(dataGridView1.CurrentRow.Cells["LocalDrivingLicenseApplicationID"].Value);
+            bool visionPassed = clsTest.IsTestPassed(localAppID, 1);
+
+            bool writtenPassed = clsTest.IsTestPassed(localAppID, 2);
+            bool streetPassed = clsTest.IsTestPassed(localAppID, 3);
+
+            sechduleVissionTestToolStripMenuItem.Enabled = false;
+            sechduleWriteTestToolStripMenuItem.Enabled = false;
+            sechduleStrretTestToolStripMenuItem.Enabled = false;
+
+            if(!visionPassed)
+                sechduleVissionTestToolStripMenuItem.Enabled = true;
+            else if(!writtenPassed) sechduleWriteTestToolStripMenuItem.Enabled   = true;
+            else if(!streetPassed) sechduleStrretTestToolStripMenuItem.Enabled = true;
+
+        }
+
+        private void sechduleWriteTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _ID = Convert.ToInt32(dataGridView1.CurrentRow.Cells["LocalDrivingLicenseApplicationID"].Value);
+            int TestTypeID = 2;
+            frmSchedualVissionTest frm = new frmSchedualVissionTest(_ID, TestTypeID);
+            frm.Show();
+        }
+
+        private void sechduleStrretTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _ID = Convert.ToInt32(dataGridView1.CurrentRow.Cells["LocalDrivingLicenseApplicationID"].Value);
+            int TestTypeID = 3;
+            frmSchedualVissionTest frm = new frmSchedualVissionTest(_ID, TestTypeID);
+            frm.Show();
+
         }
     }
 }

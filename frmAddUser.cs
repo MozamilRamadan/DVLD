@@ -48,7 +48,7 @@ namespace DVLD
             }
             else
             {
-                _person=new clsPerson();
+                _person = new clsPerson();
                 this.Text = "Add New User";
                 btnSave.Text = "Add";
                 _IsUpdateMode=false;
