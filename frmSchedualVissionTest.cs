@@ -13,11 +13,11 @@ namespace DVLD
         public frmSchedualVissionTest(int id,int testTypeID)
         {
             InitializeComponent();
-            _LoadPictureAndTitle();
             _ID = id;
             _TestTypeID = testTypeID;
             ctrlApplicationDetails1.LoadInfo(_ID);
             LoadData();
+            _LoadPictureAndTitle();
         }
         void LoadData()
         {
@@ -31,7 +31,7 @@ namespace DVLD
             tp = clsTestAppointment.FindByLDLAID(_ID);
             if (tp != null)
             {
-                if (tp.AppointmentDate > DateTime.Today && tp.TestTypeID == 1)
+                if (tp.AppointmentDate > DateTime.Today && tp.TestTypeID == _TestTypeID)
                 {
                     MessageBox.Show("The CLient Already Have Appoinment Date.", "Error", MessageBoxButtons.OK);
                     return;

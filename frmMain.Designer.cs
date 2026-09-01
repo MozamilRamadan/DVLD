@@ -233,7 +233,7 @@
             // 
             this.internationalLicensesToolStripMenuItem.Name = "internationalLicensesToolStripMenuItem";
             this.internationalLicensesToolStripMenuItem.Size = new System.Drawing.Size(313, 26);
-            this.internationalLicensesToolStripMenuItem.Text = "international Licenses";
+            this.internationalLicensesToolStripMenuItem.Text = "International Licenses";
             // 
             // detainLicensesToolStripMenuItem
             // 

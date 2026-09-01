@@ -20,6 +20,7 @@ namespace DVLD
             _LDAppID = id;
             _AppintmentID = appID;
             _TestTypeID = testTypeID;
+
             if (appID != -1)
             {
                 _tp = clsTestAppointment.Find(appID);

@@ -43,7 +43,8 @@ namespace DVLD
         }
         void LoadData()
         {
-            _test.TestAppointmentID = _appID;
+            _test = new clsTest();
+            _test.TestAppointmentID = _testApp.TestAppointmentID;
             if (rdPass.Checked) 
                 _test.TestResult = true;
             else
@@ -62,6 +63,8 @@ namespace DVLD
             LoadData();
             if (_test.Save())
             {
+                _testApp.IsLocked = true;
+                _testApp.Save();
                 if (IsUpdateMode)
                 {
                     Message = "Update Successfuly";
@@ -71,7 +74,6 @@ namespace DVLD
                 }
                 else
                 {
-                    _test = new clsTest();
                     MessageBox.Show(Message, Title, MessageBoxButtons.OKCancel);
                 }
             }

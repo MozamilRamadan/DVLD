@@ -92,6 +92,7 @@
             this.showPersonLicensessHistoryToolStripMenuItem});
             this.cmFormat.Name = "ContextMenuFormat";
             this.cmFormat.Size = new System.Drawing.Size(291, 254);
+            this.cmFormat.Opening += new System.ComponentModel.CancelEventHandler(this.cmFormat_Opening);
             // 
             // tsmShowDetails
             // 
@@ -112,6 +113,7 @@
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
             this.deleteToolStripMenuItem.Size = new System.Drawing.Size(290, 24);
             this.deleteToolStripMenuItem.Text = "Delete Application";
+            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
@@ -171,6 +173,7 @@
             this.issuesDrivingLicenseFirstTimeToolStripMenuItem.Name = "issuesDrivingLicenseFirstTimeToolStripMenuItem";
             this.issuesDrivingLicenseFirstTimeToolStripMenuItem.Size = new System.Drawing.Size(290, 24);
             this.issuesDrivingLicenseFirstTimeToolStripMenuItem.Text = "Issues Driving License(FirstTime)";
+            this.issuesDrivingLicenseFirstTimeToolStripMenuItem.Click += new System.EventHandler(this.issuesDrivingLicenseFirstTimeToolStripMenuItem_Click);
             // 
             // toolStripMenuItem4
             // 
@@ -182,6 +185,7 @@
             this.showLicenseToolStripMenuItem.Name = "showLicenseToolStripMenuItem";
             this.showLicenseToolStripMenuItem.Size = new System.Drawing.Size(290, 24);
             this.showLicenseToolStripMenuItem.Text = "Show License";
+            this.showLicenseToolStripMenuItem.Click += new System.EventHandler(this.showLicenseToolStripMenuItem_Click);
             // 
             // toolStripMenuItem5
             // 
@@ -213,9 +217,9 @@
             this.lblRecords.AutoSize = true;
             this.lblRecords.Location = new System.Drawing.Point(124, 494);
             this.lblRecords.Name = "lblRecords";
-            this.lblRecords.Size = new System.Drawing.Size(14, 16);
+            this.lblRecords.Size = new System.Drawing.Size(43, 16);
             this.lblRecords.TabIndex = 16;
-            this.lblRecords.Text = "0";
+            this.lblRecords.Text = "[????]";
             // 
             // label3
             // 

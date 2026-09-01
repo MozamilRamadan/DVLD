@@ -107,6 +107,12 @@
     <Compile Include="frmEditTestTypes.Designer.cs">
       <DependentUpon>frmEditTestTypes.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmIssueFirstDriverLicense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIssueFirstDriverLicense.Designer.cs">
+      <DependentUpon>frmIssueFirstDriverLicense.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLocalDrinvingApplicationInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +136,12 @@
     </Compile>
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmManageDriver.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManageDriver.Designer.cs">
+      <DependentUpon>frmManageDriver.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMangeUsers.cs">
       <SubType>Form</SubType>
@@ -160,6 +172,12 @@
     </Compile>
     <Compile Include="frmSchedualVissionTest.Designer.cs">
       <DependentUpon>frmSchedualVissionTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmShowLicenes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmShowLicenes.Designer.cs">
+      <DependentUpon>frmShowLicenes.cs</DependentUpon>
     </Compile>
     <Compile Include="frmTakeTest.cs">
       <SubType>Form</SubType>
@@ -229,6 +247,9 @@
     <EmbeddedResource Include="frmEditTestTypes.resx">
       <DependentUpon>frmEditTestTypes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmIssueFirstDriverLicense.resx">
+      <DependentUpon>frmIssueFirstDriverLicense.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLocalDrinvingApplicationInfo.resx">
       <DependentUpon>frmLocalDrinvingApplicationInfo.cs</DependentUpon>
     </EmbeddedResource>
@@ -240,6 +261,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManageDriver.resx">
+      <DependentUpon>frmManageDriver.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMangeUsers.resx">
       <DependentUpon>frmMangeUsers.cs</DependentUpon>
@@ -436,6 +460,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\driving-test 512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Driver Main.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PersonDetails 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\International 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PersonLicenseHistory 32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
