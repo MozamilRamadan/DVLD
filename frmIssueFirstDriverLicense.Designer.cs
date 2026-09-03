@@ -32,8 +32,8 @@
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtNote = new System.Windows.Forms.RichTextBox();
+            this.btnIssue = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,6 +72,20 @@
             this.txtNote.TabIndex = 124;
             this.txtNote.Text = "";
             // 
+            // btnIssue
+            // 
+            this.btnIssue.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIssue.Image = global::DVLD.Properties.Resources.Save_32;
+            this.btnIssue.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnIssue.Location = new System.Drawing.Point(517, 418);
+            this.btnIssue.Name = "btnIssue";
+            this.btnIssue.Size = new System.Drawing.Size(103, 40);
+            this.btnIssue.TabIndex = 122;
+            this.btnIssue.Text = "Issue";
+            this.btnIssue.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnIssue.UseVisualStyleBackColor = true;
+            this.btnIssue.Click += new System.EventHandler(this.btnIssue_Click);
+            // 
             // btnClose
             // 
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -85,19 +99,6 @@
             this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnClose.UseVisualStyleBackColor = true;
             // 
-            // btnSave
-            // 
-            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Image = global::DVLD.Properties.Resources.Save_32;
-            this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSave.Location = new System.Drawing.Point(517, 418);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(103, 40);
-            this.btnSave.TabIndex = 122;
-            this.btnSave.Text = "Save";
-            this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSave.UseVisualStyleBackColor = true;
-            // 
             // frmIssueFirstDriverLicense
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -107,7 +108,7 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.txtNote);
             this.Controls.Add(this.btnClose);
-            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.btnIssue);
             this.Controls.Add(this.ctrlApplicationDetails1);
             this.Name = "frmIssueFirstDriverLicense";
             this.Text = "frmIssueFirstDriverLicense";
@@ -123,7 +124,7 @@
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.RichTextBox txtNote;
+        private System.Windows.Forms.Button btnIssue;
         private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.Button btnSave;
     }
 }
