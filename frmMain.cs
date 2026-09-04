@@ -100,5 +100,26 @@ namespace DVLD
             frm.MdiParent = this;
             frm.Show();
         }
+
+        private void driverToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmManageDriver frm = new frmManageDriver();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void internationalLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmInternationalLicenseApplications frm = new frmInternationalLicenseApplications();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void replacementForLostOrDamagedLicensesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmReplacementForDamagedLicense replace = new frmReplacementForDamagedLicense();
+            replace.MdiParent = this;
+            replace.Show();
+        }
     }
 }

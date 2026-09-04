@@ -10,13 +10,11 @@ using System.Windows.Forms;
 
 namespace DVLD
 {
-    public partial class frmShowLicenes : Form
+    public partial class frmTry : Form
     {
-        int _LDLAppID = -1;
-        public frmShowLicenes(int id)
+        public frmTry()
         {
             InitializeComponent();
-            _LDLAppID = id;
         }
     }
 }

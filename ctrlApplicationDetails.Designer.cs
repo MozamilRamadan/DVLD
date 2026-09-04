@@ -68,7 +68,6 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.ctrlPersonCard1);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.lblTest);
@@ -88,7 +87,7 @@
             // ctrlPersonCard1
             // 
             this.ctrlPersonCard1.AllowDrop = true;
-            this.ctrlPersonCard1.Location = new System.Drawing.Point(-3, -3);
+            this.ctrlPersonCard1.Location = new System.Drawing.Point(3, 291);
             this.ctrlPersonCard1.Name = "ctrlPersonCard1";
             this.ctrlPersonCard1.Size = new System.Drawing.Size(770, 303);
             this.ctrlPersonCard1.TabIndex = 21;
@@ -435,10 +434,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.ctrlPersonCard1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "ctrlApplicationDetails";
-            this.Size = new System.Drawing.Size(750, 297);
+            this.Size = new System.Drawing.Size(1221, 734);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

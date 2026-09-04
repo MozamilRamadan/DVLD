@@ -70,6 +70,18 @@
     <Compile Include="ctrlApplicationDetails.Designer.cs">
       <DependentUpon>ctrlApplicationDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="ctrlLicenseHistory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ctrlLicenseHistory.Designer.cs">
+      <DependentUpon>ctrlLicenseHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ctrlLicenseInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ctrlLicenseInfo.Designer.cs">
+      <DependentUpon>ctrlLicenseInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="ctrlPersonCard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -107,11 +119,23 @@
     <Compile Include="frmEditTestTypes.Designer.cs">
       <DependentUpon>frmEditTestTypes.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmInternationalLicenseApplications.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInternationalLicenseApplications.Designer.cs">
+      <DependentUpon>frmInternationalLicenseApplications.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmIssueFirstDriverLicense.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmIssueFirstDriverLicense.Designer.cs">
       <DependentUpon>frmIssueFirstDriverLicense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLicenseHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLicenseHistory.Designer.cs">
+      <DependentUpon>frmLicenseHistory.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLocalDrinvingApplicationInfo.cs">
       <SubType>Form</SubType>
@@ -161,6 +185,12 @@
     <Compile Include="frmAddNewLocalDrivingApplication.Designer.cs">
       <DependentUpon>frmAddNewLocalDrivingApplication.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmReplacementForDamagedLicense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReplacementForDamagedLicense.Designer.cs">
+      <DependentUpon>frmReplacementForDamagedLicense.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSchedualTest.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,11 +203,11 @@
     <Compile Include="frmSchedualVissionTest.Designer.cs">
       <DependentUpon>frmSchedualVissionTest.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmShowLicenes.cs">
+    <Compile Include="frmShowLicenseInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmShowLicenes.Designer.cs">
-      <DependentUpon>frmShowLicenes.cs</DependentUpon>
+    <Compile Include="frmShowLicenseInfo.Designer.cs">
+      <DependentUpon>frmShowLicenseInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="frmTakeTest.cs">
       <SubType>Form</SubType>
@@ -190,6 +220,12 @@
     </Compile>
     <Compile Include="frmTestTypes.Designer.cs">
       <DependentUpon>frmTestTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTry.Designer.cs">
+      <DependentUpon>frmTry.cs</DependentUpon>
     </Compile>
     <Compile Include="frmVisionTest.cs">
       <SubType>Form</SubType>
@@ -229,6 +265,12 @@
     <EmbeddedResource Include="ctrlApplicationDetails.resx">
       <DependentUpon>ctrlApplicationDetails.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ctrlLicenseHistory.resx">
+      <DependentUpon>ctrlLicenseHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ctrlLicenseInfo.resx">
+      <DependentUpon>ctrlLicenseInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ctrlPersonCard.resx">
       <DependentUpon>ctrlPersonCard.cs</DependentUpon>
     </EmbeddedResource>
@@ -247,8 +289,14 @@
     <EmbeddedResource Include="frmEditTestTypes.resx">
       <DependentUpon>frmEditTestTypes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmInternationalLicenseApplications.resx">
+      <DependentUpon>frmInternationalLicenseApplications.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmIssueFirstDriverLicense.resx">
       <DependentUpon>frmIssueFirstDriverLicense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLicenseHistory.resx">
+      <DependentUpon>frmLicenseHistory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLocalDrinvingApplicationInfo.resx">
       <DependentUpon>frmLocalDrinvingApplicationInfo.cs</DependentUpon>
@@ -274,17 +322,26 @@
     <EmbeddedResource Include="frmAddNewLocalDrivingApplication.resx">
       <DependentUpon>frmAddNewLocalDrivingApplication.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmReplacementForDamagedLicense.resx">
+      <DependentUpon>frmReplacementForDamagedLicense.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmSchedualTest.resx">
       <DependentUpon>frmSchedualTest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSchedualVissionTest.resx">
       <DependentUpon>frmSchedualVissionTest.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmShowLicenseInfo.resx">
+      <DependentUpon>frmShowLicenseInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmTakeTest.resx">
       <DependentUpon>frmTakeTest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTestTypes.resx">
       <DependentUpon>frmTestTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTry.resx">
+      <DependentUpon>frmTry.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmVisionTest.resx">
       <DependentUpon>frmVisionTest.cs</DependentUpon>
@@ -472,6 +529,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\PersonLicenseHistory 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Notes 321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LicenseView 400.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PersonLicenseHistory 512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Detain 64.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

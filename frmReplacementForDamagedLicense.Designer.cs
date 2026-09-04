@@ -1,6 +1,6 @@
 ﻿namespace DVLD
 {
-    partial class frmShowLicenes
+    partial class frmReplacementForDamagedLicense
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // frmReplacementForDamagedLicense
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "frmShowLicenes";
+            this.ClientSize = new System.Drawing.Size(1060, 617);
+            this.Name = "frmReplacementForDamagedLicense";
+            this.Text = "frmReplacementForDamagedLicense";
+            this.ResumeLayout(false);
+
         }
 
         #endregion

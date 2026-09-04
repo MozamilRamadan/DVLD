@@ -17,7 +17,7 @@ namespace DVLD
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmLogin());
-            //Application.Run(new frmTest2());
+            //Application.Run(new frmTry());
             //Application.Run(new frmMain());
             //Application.Run(new frmAddUser());
         }
