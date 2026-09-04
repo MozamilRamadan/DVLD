@@ -481,6 +481,7 @@
             this.Controls.Add(this.groupBox2);
             this.Name = "ctrlLicenseInfo";
             this.Size = new System.Drawing.Size(869, 305);
+            this.Load += new System.EventHandler(this.ctrlLicenseInfo_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

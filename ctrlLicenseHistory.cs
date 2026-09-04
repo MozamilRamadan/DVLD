@@ -32,7 +32,7 @@ namespace DVLD
             switch (tabControl1.SelectedIndex)
             {
                 case 0:
-                    dt = clsLicense.GetAllLicenseInfo();
+                    dt = clsLicense.GetAllPersonLicenseInfo(_applications.ApplicantPersonID);
                     break;
                 case 1:
                     dt = clsInternationalLicense.GetAllLicenseInfo();

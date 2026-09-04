@@ -33,9 +33,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.cmsAppoinments = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.ctrlApplicationDetails1 = new DVLD.ctrlApplicationDetails();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.takeTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ctrlApplicationDetails1 = new DVLD.ctrlApplicationDetails();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnLocal = new System.Windows.Forms.Button();
             this.pbType = new System.Windows.Forms.PictureBox();
@@ -67,6 +67,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.ContextMenuStrip = this.cmsAppoinments;
             this.dataGridView1.Location = new System.Drawing.Point(12, 484);
@@ -85,13 +86,6 @@
             this.cmsAppoinments.Name = "contextMenuStrip1";
             this.cmsAppoinments.Size = new System.Drawing.Size(142, 56);
             // 
-            // ctrlApplicationDetails1
-            // 
-            this.ctrlApplicationDetails1.Location = new System.Drawing.Point(12, 150);
-            this.ctrlApplicationDetails1.Name = "ctrlApplicationDetails1";
-            this.ctrlApplicationDetails1.Size = new System.Drawing.Size(774, 292);
-            this.ctrlApplicationDetails1.TabIndex = 1;
-            // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.Image = global::DVLD.Properties.Resources.edit_32;
@@ -107,6 +101,13 @@
             this.takeTestToolStripMenuItem.Size = new System.Drawing.Size(141, 26);
             this.takeTestToolStripMenuItem.Text = "Take Test";
             this.takeTestToolStripMenuItem.Click += new System.EventHandler(this.takeTestToolStripMenuItem_Click);
+            // 
+            // ctrlApplicationDetails1
+            // 
+            this.ctrlApplicationDetails1.Location = new System.Drawing.Point(12, 150);
+            this.ctrlApplicationDetails1.Name = "ctrlApplicationDetails1";
+            this.ctrlApplicationDetails1.Size = new System.Drawing.Size(774, 292);
+            this.ctrlApplicationDetails1.TabIndex = 1;
             // 
             // btnClose
             // 

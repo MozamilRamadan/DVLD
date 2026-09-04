@@ -15,6 +15,7 @@ namespace DVLD
         public frmTry()
         {
             InitializeComponent();
+            ctrlApplicationDetails1.LoadInfo(38);
         }
     }
 }

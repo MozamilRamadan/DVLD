@@ -197,15 +197,16 @@
             this.showPersonLicensessHistoryToolStripMenuItem.Name = "showPersonLicensessHistoryToolStripMenuItem";
             this.showPersonLicensessHistoryToolStripMenuItem.Size = new System.Drawing.Size(290, 24);
             this.showPersonLicensessHistoryToolStripMenuItem.Text = "Show Person Licensess History";
+            this.showPersonLicensessHistoryToolStripMenuItem.Click += new System.EventHandler(this.showPersonLicensessHistoryToolStripMenuItem_Click);
             // 
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Image = global::DVLD.Properties.Resources.Close_32;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(997, 494);
+            this.button2.Location = new System.Drawing.Point(979, 491);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(118, 43);
+            this.button2.Size = new System.Drawing.Size(136, 57);
             this.button2.TabIndex = 17;
             this.button2.Text = "cancel";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;

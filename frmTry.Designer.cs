@@ -28,21 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.ctrlApplicationDetails1 = new DVLD.ctrlApplicationDetails();
             this.SuspendLayout();
             // 
-            // ctrlLicenseInfo1
+            // ctrlApplicationDetails1
             // 
-            this.ctrlLicenseInfo1.Location = new System.Drawing.Point(0, 0);
-            this.ctrlLicenseInfo1.Name = "ctrlLicenseInfo1";
-            this.ctrlLicenseInfo1.Size = new System.Drawing.Size(895, 652);
-            this.ctrlLicenseInfo1.TabIndex = 0;
+            this.ctrlApplicationDetails1.Location = new System.Drawing.Point(0, 0);
+            this.ctrlApplicationDetails1.Name = "ctrlApplicationDetails1";
+            this.ctrlApplicationDetails1.Size = new System.Drawing.Size(1221, 734);
+            this.ctrlApplicationDetails1.TabIndex = 0;
             // 
             // frmTry
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1229, 714);
-            this.Controls.Add(this.ctrlLicenseInfo1);
+            this.Controls.Add(this.ctrlApplicationDetails1);
             this.Name = "frmTry";
             this.Text = "frmTry";
             this.ResumeLayout(false);
@@ -52,5 +53,6 @@
         #endregion
 
         private ctrlLicenseInfo ctrlLicenseInfo1;
+        private ctrlApplicationDetails ctrlApplicationDetails1;
     }
 }

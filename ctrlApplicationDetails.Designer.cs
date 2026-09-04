@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.ctrlPersonCard1 = new DVLD.ctrlPersonCard();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.lblTest = new System.Windows.Forms.Label();
@@ -39,6 +38,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.lblID = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.ctrlPersonCard1 = new DVLD.ctrlPersonCard();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lblPersonInfo = new System.Windows.Forms.LinkLabel();
             this.lblCreateBy = new System.Windows.Forms.Label();
@@ -83,15 +83,6 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Driving License Application Info";
-            // 
-            // ctrlPersonCard1
-            // 
-            this.ctrlPersonCard1.AllowDrop = true;
-            this.ctrlPersonCard1.Location = new System.Drawing.Point(3, 291);
-            this.ctrlPersonCard1.Name = "ctrlPersonCard1";
-            this.ctrlPersonCard1.Size = new System.Drawing.Size(770, 303);
-            this.ctrlPersonCard1.TabIndex = 21;
-            this.ctrlPersonCard1.Visible = false;
             // 
             // button2
             // 
@@ -181,6 +172,15 @@
             this.label2.Size = new System.Drawing.Size(98, 18);
             this.label2.TabIndex = 0;
             this.label2.Text = "L.D.App.ID :";
+            // 
+            // ctrlPersonCard1
+            // 
+            this.ctrlPersonCard1.AllowDrop = true;
+            this.ctrlPersonCard1.Location = new System.Drawing.Point(3, 291);
+            this.ctrlPersonCard1.Name = "ctrlPersonCard1";
+            this.ctrlPersonCard1.Size = new System.Drawing.Size(770, 303);
+            this.ctrlPersonCard1.TabIndex = 21;
+            this.ctrlPersonCard1.Visible = false;
             // 
             // groupBox2
             // 

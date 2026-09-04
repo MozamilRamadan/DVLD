@@ -127,7 +127,7 @@ namespace DVLD
             }
             else
             {
-                MessageBox.Show("Delete Person", "Faiel To Delete");
+                MessageBox.Show("Delete Person", "Faild To Delete");
             }
         }
     }

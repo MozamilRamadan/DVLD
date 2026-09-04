@@ -65,6 +65,11 @@ namespace DVLD
             {
                 _testApp.IsLocked = true;
                 _testApp.Save();
+
+                if (_TestTypeID == 3 && _test.TestResult)
+                {
+                    clsLocalDrivingLicenseApplications.SetApplicationCompleted(_appID);
+                }
                 if (IsUpdateMode)
                 {
                     Message = "Update Successfuly";
@@ -81,6 +86,8 @@ namespace DVLD
             {
                 MessageBox.Show("Faild To Add", "Error", MessageBoxButtons.OKCancel);
             }
+
+            FillData();
         }
 
 

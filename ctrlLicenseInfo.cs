@@ -24,18 +24,13 @@ namespace DVLD
         clsLocalDrivingLicenseApplications _application;
         clsLicense _license;
 
-        public ctrlLicenseInfo(int ID)
-        {
-            InitializeComponent();
-            _LDAID = ID;
-            LoadInfo();
-        }
         public ctrlLicenseInfo()
         {
             InitializeComponent();
         }
-        public void LoadInfo()
+        public void LoadInfo(int ID)
         {
+            _LDAID = ID;
             _application = clsLocalDrivingLicenseApplications.Find(_LDAID);
             _license = clsLicense.FindByLDLAppID(_LDAID);
             if (_application != null && _license != null)
@@ -63,5 +58,10 @@ namespace DVLD
 
         }
 
+        private void ctrlLicenseInfo_Load(object sender, EventArgs e)
+        {
+
+            LoadInfo(_LDAID);
+        }
     }
 }

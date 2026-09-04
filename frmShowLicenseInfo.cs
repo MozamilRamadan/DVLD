@@ -12,9 +12,17 @@ namespace DVLD
 {
     public partial class frmShowLicenseInfo : Form
     {
-        public frmShowLicenseInfo()
+        int _LDLID = -1;
+        public frmShowLicenseInfo(int ID)
         {
             InitializeComponent();
+            _LDLID=ID;
+            ctrlLicenseInfo1.LoadInfo(_LDLID);
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
