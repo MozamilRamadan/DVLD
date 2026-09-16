@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ctrlApplicationDetails1 = new DVLD.ctrlApplicationDetails();
+            this.ctrlApplicationDetails1 = new DVLD.ctrlDriverLicenseApplicationInfo();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtNote = new System.Windows.Forms.RichTextBox();
@@ -120,7 +120,7 @@
 
         #endregion
 
-        private ctrlApplicationDetails ctrlApplicationDetails1;
+        private ctrlDriverLicenseApplicationInfo ctrlApplicationDetails1;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.RichTextBox txtNote;

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ctrlApplicationDetails1 = new DVLD.ctrlApplicationDetails();
+            this.ctrlApplicationDetails1 = new DVLD.ctrlDriverLicenseApplicationInfo();
             this.SuspendLayout();
             // 
             // ctrlApplicationDetails1
@@ -53,6 +53,6 @@
         #endregion
 
         private ctrlLicenseInfo ctrlLicenseInfo1;
-        private ctrlApplicationDetails ctrlApplicationDetails1;
+        private ctrlDriverLicenseApplicationInfo ctrlApplicationDetails1;
     }
 }

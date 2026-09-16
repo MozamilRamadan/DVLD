@@ -35,7 +35,7 @@
             this.cmsAppoinments = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.takeTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ctrlApplicationDetails1 = new DVLD.ctrlApplicationDetails();
+            this.ctrlApplicationDetails1 = new DVLD.ctrlDriverLicenseApplicationInfo();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnLocal = new System.Windows.Forms.Button();
             this.pbType = new System.Windows.Forms.PictureBox();
@@ -168,7 +168,7 @@
         #endregion
 
         private System.Windows.Forms.Label lblTestTitle;
-        private ctrlApplicationDetails ctrlApplicationDetails1;
+        private ctrlDriverLicenseApplicationInfo ctrlApplicationDetails1;
         private System.Windows.Forms.PictureBox pbType;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnLocal;

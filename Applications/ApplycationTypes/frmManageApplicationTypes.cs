@@ -13,16 +13,10 @@ namespace DVLD
 {
     public partial class frmManageApplicationTypes : Form
     {
-        DataTable _dt = new DataTable();
+        DataTable _dt;
         public frmManageApplicationTypes()
         {
             InitializeComponent();
-            _dt = clsApplicationTypes.GetAllApplicationTypes();
-            if(_dt != null)
-            {
-                dataGridView1.DataSource = _dt;
-                lblRecords.Text = _dt.Rows.Count.ToString();
-            }
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -32,17 +26,34 @@ namespace DVLD
 
         private void editToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            int ID = Convert.ToInt32(dataGridView1.CurrentRow.Cells["ApplicationTypeID"].Value);
+            int ID = Convert.ToInt32(dgvApplicationTypes.CurrentRow.Cells[0].Value);
             frmEditFees Fees = new frmEditFees(ID);
             Fees.dataBack += Fees_dataBack;
             Fees.ShowDialog();
+            frmManageApplicationTypes_Load(null, null);
         }
 
         private void Fees_dataBack(object sender)
         {
             _dt = clsApplicationTypes.GetAllApplicationTypes();
-            dataGridView1.DataSource = _dt;
+            dgvApplicationTypes.DataSource = _dt;
+            lblRecords.Text = dgvApplicationTypes.Rows.Count.ToString();
+        }
+
+        private void frmManageApplicationTypes_Load(object sender, EventArgs e)
+        {
+            _dt= clsApplicationTypes.GetAllApplicationTypes();
+            dgvApplicationTypes.DataSource = _dt;
             lblRecords.Text = _dt.Rows.Count.ToString();
+
+            dgvApplicationTypes.Columns[0].HeaderText = "ID";
+            dgvApplicationTypes.Columns[0].Width = 110;
+
+            dgvApplicationTypes.Columns[1].HeaderText = "Title";
+            dgvApplicationTypes.Columns[1].Width = 400;
+
+            dgvApplicationTypes.Columns[2].HeaderText = "Fees";
+            dgvApplicationTypes.Columns[2].Width = 100;
         }
     }
 }

@@ -121,5 +121,12 @@ namespace DVLD
             replace.MdiParent = this;
             replace.Show();
         }
+
+        private void releaseDetainedLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmDetainAndReleaseLicenses frm = new frmDetainAndReleaseLicenses();
+            frm.MdiParent = this;
+            frm.Show();
+        }
     }
 }

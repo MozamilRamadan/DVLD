@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Applications\Controls\crtlApplicantBasicInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Applications\Controls\crtlApplicantBasicInfo.Designer.cs">
+      <DependentUpon>crtlApplicantBasicInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="crtlAppDetails.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -64,11 +70,17 @@
     <Compile Include="Calc.Designer.cs">
       <DependentUpon>Calc.cs</DependentUpon>
     </Compile>
-    <Compile Include="ctrlApplicationDetails.cs">
+    <Compile Include="ctrlDriverLicenseApplicationInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ctrlApplicationDetails.Designer.cs">
-      <DependentUpon>ctrlApplicationDetails.cs</DependentUpon>
+    <Compile Include="ctrlDriverLicenseApplicationInfo.Designer.cs">
+      <DependentUpon>ctrlDriverLicenseApplicationInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ctrlDetainInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ctrlDetainInfo.Designer.cs">
+      <DependentUpon>ctrlDetainInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="ctrlLicenseHistory.cs">
       <SubType>UserControl</SubType>
@@ -82,16 +94,16 @@
     <Compile Include="ctrlLicenseInfo.Designer.cs">
       <DependentUpon>ctrlLicenseInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="ctrlPersonCard.cs">
+    <Compile Include="People\Controls\ctrlPersonCard.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ctrlPersonCard.Designer.cs">
+    <Compile Include="People\Controls\ctrlPersonCard.Designer.cs">
       <DependentUpon>ctrlPersonCard.cs</DependentUpon>
     </Compile>
-    <Compile Include="ctrlPersonInfo.cs">
+    <Compile Include="People\Controls\ctrlPersonInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ctrlPersonInfo.Designer.cs">
+    <Compile Include="People\Controls\ctrlPersonInfo.Designer.cs">
       <DependentUpon>ctrlPersonInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="CurrentUser.cs" />
@@ -107,10 +119,16 @@
     <Compile Include="frmChangePassword.Designer.cs">
       <DependentUpon>frmChangePassword.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmEditFees.cs">
+    <Compile Include="frmDetainAndReleaseLicenses.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmEditFees.Designer.cs">
+    <Compile Include="frmDetainAndReleaseLicenses.Designer.cs">
+      <DependentUpon>frmDetainAndReleaseLicenses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\ApplycationTypes\frmEditFees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Applications\ApplycationTypes\frmEditFees.Designer.cs">
       <DependentUpon>frmEditFees.cs</DependentUpon>
     </Compile>
     <Compile Include="frmEditTestTypes.cs">
@@ -173,10 +191,10 @@
     <Compile Include="frmMangeUsers.Designer.cs">
       <DependentUpon>frmMangeUsers.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmManageApplicationTypes.cs">
+    <Compile Include="Applications\ApplycationTypes\frmManageApplicationTypes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmManageApplicationTypes.Designer.cs">
+    <Compile Include="Applications\ApplycationTypes\frmManageApplicationTypes.Designer.cs">
       <DependentUpon>frmManageApplicationTypes.cs</DependentUpon>
     </Compile>
     <Compile Include="frmAddNewLocalDrivingApplication.cs">
@@ -233,6 +251,10 @@
     <Compile Include="frmVisionTest.Designer.cs">
       <DependentUpon>frmVisionTest.cs</DependentUpon>
     </Compile>
+    <Compile Include="Global Glasses\clsFormat.cs" />
+    <Compile Include="Global Glasses\clsGlobal.cs" />
+    <Compile Include="Global Glasses\clsUtil.cs" />
+    <Compile Include="Global Glasses\clsValidation.cs" />
     <Compile Include="MangePeople.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -251,8 +273,17 @@
     <Compile Include="frmPersonCard.Designer.cs">
       <DependentUpon>frmPersonCard.cs</DependentUpon>
     </Compile>
+    <Compile Include="People\frmShowPersonInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="People\frmShowPersonInfo.Designer.cs">
+      <DependentUpon>frmShowPersonInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Applications\Controls\crtlApplicantBasicInfo.resx">
+      <DependentUpon>crtlApplicantBasicInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="crtlAppDetails.resx">
       <DependentUpon>crtlAppDetails.cs</DependentUpon>
     </EmbeddedResource>
@@ -262,8 +293,11 @@
     <EmbeddedResource Include="Calc.resx">
       <DependentUpon>Calc.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ctrlApplicationDetails.resx">
-      <DependentUpon>ctrlApplicationDetails.cs</DependentUpon>
+    <EmbeddedResource Include="ctrlDriverLicenseApplicationInfo.resx">
+      <DependentUpon>ctrlDriverLicenseApplicationInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ctrlDetainInfo.resx">
+      <DependentUpon>ctrlDetainInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ctrlLicenseHistory.resx">
       <DependentUpon>ctrlLicenseHistory.cs</DependentUpon>
@@ -271,10 +305,10 @@
     <EmbeddedResource Include="ctrlLicenseInfo.resx">
       <DependentUpon>ctrlLicenseInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ctrlPersonCard.resx">
+    <EmbeddedResource Include="People\Controls\ctrlPersonCard.resx">
       <DependentUpon>ctrlPersonCard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ctrlPersonInfo.resx">
+    <EmbeddedResource Include="People\Controls\ctrlPersonInfo.resx">
       <DependentUpon>ctrlPersonInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAddUser.resx">
@@ -283,7 +317,10 @@
     <EmbeddedResource Include="frmChangePassword.resx">
       <DependentUpon>frmChangePassword.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmEditFees.resx">
+    <EmbeddedResource Include="frmDetainAndReleaseLicenses.resx">
+      <DependentUpon>frmDetainAndReleaseLicenses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Applications\ApplycationTypes\frmEditFees.resx">
       <DependentUpon>frmEditFees.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmEditTestTypes.resx">
@@ -316,7 +353,7 @@
     <EmbeddedResource Include="frmMangeUsers.resx">
       <DependentUpon>frmMangeUsers.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmManageApplicationTypes.resx">
+    <EmbeddedResource Include="Applications\ApplycationTypes\frmManageApplicationTypes.resx">
       <DependentUpon>frmManageApplicationTypes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAddNewLocalDrivingApplication.resx">
@@ -354,6 +391,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPersonCard.resx">
       <DependentUpon>frmPersonCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="People\frmShowPersonInfo.resx">
+      <DependentUpon>frmShowPersonInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -565,6 +605,22 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\wallpaper.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Applications\International Licenses\" />
+    <Folder Include="Applications\Local Driving Licenses\" />
+    <Folder Include="Applications\Release License\" />
+    <Folder Include="Applications\Renew Local Licenses\" />
+    <Folder Include="Applications\Replace Lost Or Damaged License\" />
+    <Folder Include="Drivers\" />
+    <Folder Include="Licenses\Controls\" />
+    <Folder Include="Licenses\Detained License\" />
+    <Folder Include="Licenses\International License\" />
+    <Folder Include="Licenses\Local License\" />
+    <Folder Include="Login\" />
+    <Folder Include="Tests\Controls\" />
+    <Folder Include="Tests\Test Types\" />
+    <Folder Include="Users\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
