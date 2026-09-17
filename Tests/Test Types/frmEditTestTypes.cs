@@ -15,11 +15,11 @@ namespace DVLD
     {
         public delegate void DataBackEventHandler(object sender);
         public event DataBackEventHandler dataBack;
-        clsTestTypes _Type;
+        clsTestType _Type;
         public frmEditTestTypes(int ID)
         {
             InitializeComponent();
-            _Type =clsTestTypes.Find(ID);
+            _Type =clsTestType.Find(ID);
             FillData();
         }
 
@@ -27,7 +27,7 @@ namespace DVLD
         {
             if (_Type != null)
             {
-                lblID.Text = _Type.TestTypeID.ToString();
+                lblID.Text = _Type.ID.ToString();
                 rtxtDescription.Text = _Type.TestTypeDescription.ToString();
                 txtTitle.Text = _Type.TestTypeTitle.ToString();
                 txtFees.Text = _Type.TestTypeFees.ToString();

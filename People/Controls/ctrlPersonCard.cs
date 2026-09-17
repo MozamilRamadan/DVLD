@@ -94,7 +94,7 @@ namespace DVLD
 
         }
 
-        private void _ResetPersonInfo() {
+        public void _ResetPersonInfo() {
             lblFullName.Text = "" + " ";
             lblNaionalNo.Text = "";
             lblGendor.Text = "Male";

@@ -39,7 +39,7 @@ namespace DVLD.Global_Glasses
                 return false; }
         }
 
-        public static bool GetStoredCredential(string Username, string Password)
+        public static bool GetStoredCredential(ref string Username,ref string Password)
         {
             try
             {

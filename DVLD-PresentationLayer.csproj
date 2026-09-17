@@ -64,12 +64,6 @@
     <Compile Include="Applications\Renew Local Licenses\frmRenewLicenseApplication.Designer.cs">
       <DependentUpon>frmRenewLicenseApplication.cs</DependentUpon>
     </Compile>
-    <Compile Include="People\Controls\ctrlAddNew.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="People\Controls\ctrlAddNew.Designer.cs">
-      <DependentUpon>ctrlAddNew.cs</DependentUpon>
-    </Compile>
     <Compile Include="ctrlDriverLicenseApplicationInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -106,6 +100,12 @@
     </Compile>
     <Compile Include="People\frmFindPerson.Designer.cs">
       <DependentUpon>frmFindPerson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\ctrlUserCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Users\ctrlUserCard.Designer.cs">
+      <DependentUpon>ctrlUserCard.cs</DependentUpon>
     </Compile>
     <Compile Include="Users\frmAddUser.cs">
       <SubType>Form</SubType>
@@ -249,11 +249,11 @@
     <Compile Include="Global Glasses\clsGlobal.cs" />
     <Compile Include="Global Glasses\clsUtil.cs" />
     <Compile Include="Global Glasses\clsValidation.cs" />
-    <Compile Include="People\MangePeople.cs">
+    <Compile Include="People\frmMangePeople.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="People\MangePeople.Designer.cs">
-      <DependentUpon>MangePeople.cs</DependentUpon>
+    <Compile Include="People\frmMangePeople.Designer.cs">
+      <DependentUpon>frmMangePeople.cs</DependentUpon>
     </Compile>
     <Compile Include="People\frmAddNew.cs">
       <SubType>Form</SubType>
@@ -278,9 +278,6 @@
     <EmbeddedResource Include="Applications\Controls\crtlApplicantBasicInfo.resx">
       <DependentUpon>crtlApplicantBasicInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="People\Controls\ctrlAddNew.resx">
-      <DependentUpon>ctrlAddNew.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ctrlDriverLicenseApplicationInfo.resx">
       <DependentUpon>ctrlDriverLicenseApplicationInfo.cs</DependentUpon>
     </EmbeddedResource>
@@ -295,6 +292,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="People\Controls\ctrlPersonInfo.resx">
       <DependentUpon>ctrlPersonInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="People\frmFindPerson.resx">
+      <DependentUpon>frmFindPerson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\ctrlUserCard.resx">
+      <DependentUpon>ctrlUserCard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Users\frmAddUser.resx">
       <DependentUpon>frmAddUser.cs</DependentUpon>
@@ -365,8 +368,8 @@
     <EmbeddedResource Include="Tests\frmVisionTest.resx">
       <DependentUpon>frmVisionTest.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="People\MangePeople.resx">
-      <DependentUpon>MangePeople.cs</DependentUpon>
+    <EmbeddedResource Include="People\frmMangePeople.resx">
+      <DependentUpon>frmMangePeople.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="People\frmAddNew.resx">
       <DependentUpon>frmAddNew.cs</DependentUpon>

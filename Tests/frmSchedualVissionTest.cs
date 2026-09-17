@@ -15,7 +15,7 @@ namespace DVLD
             InitializeComponent();
             _ID = id;
             _TestTypeID = testTypeID;
-            ctrlApplicationDetails1.LoadInfo(_ID);
+           // ctrlApplicationDetails1.LoadInfo(_ID);
             LoadData();
             _LoadPictureAndTitle();
         }

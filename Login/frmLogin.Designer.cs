@@ -76,7 +76,6 @@
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(143, 22);
             this.txtUserName.TabIndex = 1;
-            this.txtUserName.Validating += new System.ComponentModel.CancelEventHandler(this.txtUserName_Validating);
             // 
             // txtPassword
             // 
@@ -85,7 +84,6 @@
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(143, 22);
             this.txtPassword.TabIndex = 2;
-            this.txtPassword.Validating += new System.ComponentModel.CancelEventHandler(this.txtPassword_Validating);
             // 
             // label2
             // 

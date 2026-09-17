@@ -81,15 +81,15 @@ namespace DVLD
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            byte AppStatus = Convert.ToByte(_status = enStatus.New);
+
             _applications.ApplicationDate = DateTime.Now;
             _applications.PaidFees = _applicationFees;
             _applications.CreatedByUserID = clsCurrentUser._USER.UserID;
-            _applications.ApplicationStatus = AppStatus;
+            //_applications.ApplicationStatus = 1;
             _applications.LicenseClassID = _cmClassID;
             _applications.ApplicationTypeID = 1;
             _applications.ApplicantPersonID = _PersonID;
-            clsApplication app = clsApplication.FindByAppPersonIDAndAppTypeID(_PersonID, 1, AppStatus);
+            clsApplication app = clsApplication.Find(_PersonID);
 
 
             if (app != null )

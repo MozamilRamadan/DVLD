@@ -22,7 +22,7 @@ namespace DVLD
         {
             InitializeComponent();
             _LDLAppID = LDLAppID;
-            ctrlApplicationDetails1.LoadInfo(LDLAppID);
+            //ctrlApplicationDetails1.LoadInfo(LDLAppID);
             _applocation = clsLocalDrivingLicenseApplications.Find(_LDLAppID);
 
         }
@@ -30,18 +30,18 @@ namespace DVLD
         {
             _applocation = clsLocalDrivingLicenseApplications.Find(_LDLAppID);
             _license = new clsLicense();
-                _license.ApplicationID = _applocation.LDLApplicationID;
+                _license.ApplicationID = _applocation.LocalDrivingLicenseApplicationID;
                 _license.LicenseClassID = _applocation.LicenseClassID;
                 _license.Notes = txtNote.Text;
                 _license.PaidFees = 50;
                 _license.IsActive = true;
-                _license.IssueReason = 1;
+                //_license.IssueReason = 1;
                 _license.CreatedByUserID = clsCurrentUser._USER.UserID;
             
         }
         void _AddDriver()
         {
-              _driver.PersonID = _applocation.LDLApplicationID;
+              _driver.PersonID = _applocation.LocalDrivingLicenseApplicationID;
               _driver.CreatedByUserID = clsCurrentUser._USER.UserID;
               _driver.CreatedDate = DateTime.Now;
         }

@@ -35,7 +35,6 @@
             this.cmsAppoinments = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.takeTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ctrlApplicationDetails1 = new DVLD.ctrlDriverLicenseApplicationInfo();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnLocal = new System.Windows.Forms.Button();
             this.pbType = new System.Windows.Forms.PictureBox();
@@ -103,12 +102,6 @@
             this.takeTestToolStripMenuItem.Click += new System.EventHandler(this.takeTestToolStripMenuItem_Click);
             // 
             // ctrlApplicationDetails1
-            // 
-            this.ctrlApplicationDetails1.Location = new System.Drawing.Point(12, 150);
-            this.ctrlApplicationDetails1.Name = "ctrlApplicationDetails1";
-            this.ctrlApplicationDetails1.Size = new System.Drawing.Size(774, 292);
-            this.ctrlApplicationDetails1.TabIndex = 1;
-            // 
             // btnClose
             // 
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -153,7 +146,6 @@
             this.Controls.Add(this.btnLocal);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pbType);
-            this.Controls.Add(this.ctrlApplicationDetails1);
             this.Controls.Add(this.lblTestTitle);
             this.Name = "frmSchedualVissionTest";
             this.Text = "frmSchedualVissionTest";
@@ -168,7 +160,6 @@
         #endregion
 
         private System.Windows.Forms.Label lblTestTitle;
-        private ctrlDriverLicenseApplicationInfo ctrlApplicationDetails1;
         private System.Windows.Forms.PictureBox pbType;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnLocal;

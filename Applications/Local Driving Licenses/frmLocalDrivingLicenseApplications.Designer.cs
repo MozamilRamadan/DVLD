@@ -140,7 +140,7 @@
             this.scheduleTestTSMI.Name = "scheduleTestTSMI";
             this.scheduleTestTSMI.Size = new System.Drawing.Size(290, 24);
             this.scheduleTestTSMI.Text = "Sechdule Test";
-            this.scheduleTestTSMI.DropDownOpening += new System.EventHandler(this.scheduleTestTSMI_DropDownOpening);
+           // this.scheduleTestTSMI.DropDownOpening += new System.EventHandler(this.scheduleTestTSMI_DropDownOpening);
             // 
             // sechduleVissionTestToolStripMenuItem
             // 

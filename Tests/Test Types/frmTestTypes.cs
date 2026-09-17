@@ -22,7 +22,7 @@ namespace DVLD
         }
         void LoadData()
         {
-            _dt = clsTestTypes.GetAllTestTypeData();
+            _dt = clsTestType.GetAllTestTypesData();
 
             dataGridView1.DataSource = _dt;
 

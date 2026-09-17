@@ -41,9 +41,9 @@
             // ctrlPersonCard1
             // 
             this.ctrlPersonCard1.AllowDrop = true;
-            this.ctrlPersonCard1.Location = new System.Drawing.Point(3, 63);
+            this.ctrlPersonCard1.Location = new System.Drawing.Point(3, 90);
             this.ctrlPersonCard1.Name = "ctrlPersonCard1";
-            this.ctrlPersonCard1.Size = new System.Drawing.Size(836, 303);
+            this.ctrlPersonCard1.Size = new System.Drawing.Size(946, 353);
             this.ctrlPersonCard1.TabIndex = 0;
             // 
             // groupBox1
@@ -55,7 +55,7 @@
             this.groupBox1.Controls.Add(this.txtSearch);
             this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(611, 54);
+            this.groupBox1.Size = new System.Drawing.Size(815, 89);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filtter";
@@ -64,9 +64,9 @@
             // 
             this.btnSearch.BackgroundImage = global::DVLD.Properties.Resources.Man32;
             this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnSearch.Location = new System.Drawing.Point(453, 14);
+            this.btnSearch.Location = new System.Drawing.Point(547, 21);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(50, 34);
+            this.btnSearch.Size = new System.Drawing.Size(73, 53);
             this.btnSearch.TabIndex = 16;
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
@@ -75,9 +75,9 @@
             // 
             this.btnAddUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnAddUser.Image = global::DVLD.Properties.Resources.Add_Person_40;
-            this.btnAddUser.Location = new System.Drawing.Point(520, 14);
+            this.btnAddUser.Location = new System.Drawing.Point(637, 22);
             this.btnAddUser.Name = "btnAddUser";
-            this.btnAddUser.Size = new System.Drawing.Size(50, 34);
+            this.btnAddUser.Size = new System.Drawing.Size(76, 51);
             this.btnAddUser.TabIndex = 15;
             this.btnAddUser.UseVisualStyleBackColor = true;
             this.btnAddUser.Click += new System.EventHandler(this.btnAddUser_Click);
@@ -85,12 +85,12 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(-3, 18);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(6, 35);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 18);
+            this.label2.Size = new System.Drawing.Size(104, 25);
             this.label2.TabIndex = 8;
-            this.label2.Text = "Filtter By";
+            this.label2.Text = "Filtter By:";
             // 
             // cmFiltter
             // 
@@ -98,16 +98,16 @@
             this.cmFiltter.Items.AddRange(new object[] {
             "PersonID",
             "NationalNo"});
-            this.cmFiltter.Location = new System.Drawing.Point(87, 17);
+            this.cmFiltter.Location = new System.Drawing.Point(116, 39);
             this.cmFiltter.Name = "cmFiltter";
-            this.cmFiltter.Size = new System.Drawing.Size(168, 24);
+            this.cmFiltter.Size = new System.Drawing.Size(184, 24);
             this.cmFiltter.TabIndex = 9;
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(261, 19);
+            this.txtSearch.Location = new System.Drawing.Point(323, 41);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(173, 22);
+            this.txtSearch.Size = new System.Drawing.Size(193, 22);
             this.txtSearch.TabIndex = 10;
             this.txtSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSearch_KeyPress);
             // 
@@ -118,7 +118,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.ctrlPersonCard1);
             this.Name = "ctrlPersonInfo";
-            this.Size = new System.Drawing.Size(768, 366);
+            this.Size = new System.Drawing.Size(952, 446);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

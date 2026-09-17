@@ -1,4 +1,5 @@
-﻿using DVLD_BusinessLayer;
+﻿using DVLD.People;
+using DVLD_BusinessLayer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -36,7 +37,7 @@ namespace DVLD
 
             int personID = clsCurrentUser._USER.PersonID;
 
-            frmPersonCard card = new frmPersonCard(personID);
+            frmShowPersonInfo card = new frmShowPersonInfo(personID);
             card.MdiParent = this;
             card.Show();
         }
@@ -75,7 +76,7 @@ namespace DVLD
 
         private void peopToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MangePeople frm = new MangePeople();
+            frmMangePeople frm = new frmMangePeople();
             frm.MdiParent = this;
             frm.Show();
         }

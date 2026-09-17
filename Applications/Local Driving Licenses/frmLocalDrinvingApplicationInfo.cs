@@ -30,12 +30,12 @@ namespace DVLD
             _applocation = clsLocalDrivingLicenseApplications.Find(_LDAID);
             if (_applocation != null)
             {
-                lblID.Text = _applocation.LDLApplicationID.ToString();
+                lblID.Text = _applocation.LocalDrivingLicenseApplicationID.ToString();
                 lblClasses.Text = clsLicenseClass.Find(_applocation.LicenseClassID).ClassName;
-                lblTest.Text = _applocation.PassedTest(_LDAID).ToString();
+                lblTest.Text = "";
                 lblAppID.Text = _applocation.ApplicationID.ToString();
 
-                lblStatus.Text = clsLocalDrivingLicenseApplications.GetStaus(_applocation.ApplicationStatus);
+                lblStatus.Text = _applocation.StatusText;
                 lblFees.Text = _applocation.PaidFees.ToString();
                 lblType.Text = clsApplicationTypes.Find(Convert.ToInt32(_applocation.ApplicationTypeID)).ApplicationTypeTitle.ToString();
                 lblApplicant.Text = clsPerson.Find(_applocation.ApplicantPersonID).FullName;

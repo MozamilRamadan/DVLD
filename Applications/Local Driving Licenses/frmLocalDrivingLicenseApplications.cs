@@ -81,40 +81,40 @@ namespace DVLD
             this.Close();
         }
 
-        private void scheduleTestTSMI_DropDownOpening(object sender, EventArgs e)
-        {
-            int localAppID = Convert.ToInt32(dataGridView1.CurrentRow.Cells["LocalDrivingLicenseApplicationID"].Value);
+        //private void scheduleTestTSMI_DropDownOpening(object sender, EventArgs e)
+        //{
+        //    int localAppID = Convert.ToInt32(dataGridView1.CurrentRow.Cells["LocalDrivingLicenseApplicationID"].Value);
 
-            string status = Convert.ToString(dataGridView1.CurrentRow.Cells["Status"].Value);
-
-
-            _visionPassed = clsTest.IsTestPassed(localAppID, 1);
-            _writtenPassed = clsTest.IsTestPassed(localAppID, 2);
-            _streetPassed = clsTest.IsTestPassed(localAppID, 3);
-
-            sechduleVissionTestToolStripMenuItem.Enabled = false;
-            sechduleWriteTestToolStripMenuItem.Enabled = false;
-            sechduleStrretTestToolStripMenuItem.Enabled = false;
+        //    string status = Convert.ToString(dataGridView1.CurrentRow.Cells["Status"].Value);
 
 
-            if (!_visionPassed)
-            {
-                sechduleVissionTestToolStripMenuItem.Enabled = true;
-            }
+        //    _visionPassed = clsTest.IsTestPassed(localAppID, 1);
+        //    _writtenPassed = clsTest.IsTestPassed(localAppID, 2);
+        //    _streetPassed = clsTest.IsTestPassed(localAppID, 3);
 
-            else if (!_writtenPassed) { sechduleWriteTestToolStripMenuItem.Enabled = true; }
-            else if (!_streetPassed) { sechduleStrretTestToolStripMenuItem.Enabled = true; }
+        //    sechduleVissionTestToolStripMenuItem.Enabled = false;
+        //    sechduleWriteTestToolStripMenuItem.Enabled = false;
+        //    sechduleStrretTestToolStripMenuItem.Enabled = false;
 
-            if(status == "Completed")
-            {
-                issuesDrivingLicenseFirstTimeToolStripMenuItem.Enabled = true;
 
-                scheduleTestTSMI.Enabled = false;
-                editToolStripMenuItem.Enabled = false;
-                deleteToolStripMenuItem.Enabled = false;
-                cancelAppToolStripMenuItem.Enabled = !false;
-            }
-        }
+        //    if (!_visionPassed)
+        //    {
+        //        sechduleVissionTestToolStripMenuItem.Enabled = true;
+        //    }
+
+        //    else if (!_writtenPassed) { sechduleWriteTestToolStripMenuItem.Enabled = true; }
+        //    else if (!_streetPassed) { sechduleStrretTestToolStripMenuItem.Enabled = true; }
+
+        //    if(status == "Completed")
+        //    {
+        //        issuesDrivingLicenseFirstTimeToolStripMenuItem.Enabled = true;
+
+        //        scheduleTestTSMI.Enabled = false;
+        //        editToolStripMenuItem.Enabled = false;
+        //        deleteToolStripMenuItem.Enabled = false;
+        //        cancelAppToolStripMenuItem.Enabled = !false;
+        //    }
+        //}
 
         private void cmFormat_Opening(object sender, CancelEventArgs e)
         {

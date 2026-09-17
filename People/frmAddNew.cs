@@ -1,4 +1,5 @@
-﻿using DVLD.Properties;
+﻿using DVLD.Global_Glasses;
+using DVLD.Properties;
 using DVLD_BusinessLayer;
 using System;
 using System.Collections.Generic;
@@ -15,274 +16,359 @@ namespace DVLD
 {
     public partial class frmAddNew : Form
     {
-        clsPerson _Person;
-        DataTable _dt = new DataTable();
-        string ImagePath = @"";
-        int CountryIndex = -1, _PersonID = -1;
-        bool isUdateMode = false;
 
-        public delegate void DataBackEventHandler(object sender);
+        // Declare a delegate
+        public delegate void DataBackEventHandler(object sender, int PersonID);
+
+        // Declare an event using the delegate
         public event DataBackEventHandler DataBack;
-        public frmAddNew(int personID = -1)
+
+        public enum enMode { AddNew = 0, Update = 1 };
+        public enum enGendor { Male = 0, Female = 1 };
+
+        private enMode _Mode;
+        private int _PersonID = -1;
+        clsPerson _Person;
+
+        public frmAddNew()
         {
-
-
             InitializeComponent();
-            if (personID != -1)
-            {
-                // Editing mode
-                _Person = clsPerson.Find(personID);
-                if (_Person != null)
-                {
-                    isUdateMode =true;
-                    lblPersonID.Text = _Person.PersonID.ToString();
-                    txtFirstName.Text = _Person.FirstName;
-                    txtSecondName.Text = _Person.SecondName;
-                    txtThirdName.Text = _Person.ThirdName;
-                    txtLastName.Text = _Person.LastName;
-                    txtNaNo.Text= _Person.NationalNo;
-                    dtDate.Value = _Person.DateOfBirth;
-                    txtEmail.Text = _Person.Email;
-                    txtPhone.Text = _Person.Phone;
-                    txtAddress.Text = _Person.Address;
-                    cbCountry.SelectedValue = _Person.NationalityCountryID;
-                    pbPersonImage.Image = File.Exists(_Person.ImagePath) ? Image.FromFile(_Person.ImagePath) : null;
+            _Mode = enMode.AddNew;
 
-                    this.Text = "Update Person";
-                    btnSave.Text = "Update";
+        }
 
-                }
-            }
-            else
+        public frmAddNew(int PersonID)
+        {
+            InitializeComponent();
+
+            _Mode = enMode.Update;
+            _PersonID = PersonID;
+        }
+
+        private void _ResetDefualtValues()
+        {
+            //this will initialize the reset the defaule values
+            _FillCountriesInComoboBox();
+
+            if (_Mode == enMode.AddNew)
             {
+                lblTitle.Text = "Add New Person";
                 _Person = new clsPerson();
-                isUdateMode = false;
-                this.Text = "Add New Person";
-                btnSave.Text = "Save";
+            }
+            else
+            {
+                lblTitle.Text = "Update Person";
+            }
+
+            //set default image for the person.
+            if (rbMale.Checked)
+                pbPersonImage.Image = Resources.Man32;
+            else
+                pbPersonImage.Image = Resources.Woman32;
+
+            //hide/show the remove linke incase there is no image for the person.
+            llRemoveImage.Visible = (pbPersonImage.ImageLocation != null);
+
+            //we set the max date to 18 years from today, and set the default value the same.
+            dtpDateOfBirth.MaxDate = DateTime.Now.AddYears(-18);
+            dtpDateOfBirth.Value = dtpDateOfBirth.MaxDate;
+
+            //should not allow adding age more than 100 years
+            dtpDateOfBirth.MinDate = DateTime.Now.AddYears(-100);
+
+            //this will set default country to jordan.
+            cbCountry.SelectedIndex = cbCountry.FindString("Jordan");
+
+            txtFirstName.Text = "";
+            txtSecondName.Text = "";
+            txtThirdName.Text = "";
+            txtLastName.Text = "";
+            txtNationalNo.Text = "";
+            rbMale.Checked = true;
+            txtPhone.Text = "";
+            txtEmail.Text = "";
+            txtAddress.Text = "";
+
+
+        }
+
+        private void _FillCountriesInComoboBox()
+        {
+            DataTable dtCountries = clsCountry.GetAllCountries();
+
+            foreach (DataRow row in dtCountries.Rows)
+            {
+                cbCountry.Items.Add(row["CountryName"]);
             }
         }
 
-        private void frmAddNew_Load(object sender, EventArgs e)
+        private void _LoadData()
         {
 
-            _dt = clsCountry.GetAllCountries();
+            _Person = clsPerson.Find(_PersonID);
 
-            //========================
-            cbCountry.DataSource = _dt;
-            cbCountry.DisplayMember = "CountryName";
-            cbCountry.ValueMember = "CountryID";
+            if (_Person == null)
+            {
+                MessageBox.Show("No Person with ID = " + _PersonID, "Person Not Found", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                this.Close();
+                return;
+            }
 
-            cbCountry.SelectedIndex = 164;
+            //the following code will not be executed if the person was not found
+            lblPersonID.Text = _PersonID.ToString();
+            txtFirstName.Text = _Person.FirstName;
+            txtSecondName.Text = _Person.SecondName;
+            txtThirdName.Text = _Person.ThirdName;
+            txtLastName.Text = _Person.LastName;
+            txtNationalNo.Text = _Person.NationalNo;
+            dtpDateOfBirth.Value = _Person.DateOfBirth;
 
-        }
-        public void FillPerson()
-        {
-            cbCountry.DataSource = _dt;
-            cbCountry.DisplayMember = "CountryName";
-            cbCountry.ValueMember = "CountryID";
-
-            _Person.FirstName = txtFirstName.Text;
-            _Person.SecondName = txtSecondName.Text;
-            _Person.ThirdName = txtThirdName.Text;
-            _Person.LastName = txtLastName.Text;
-            _Person.Address = txtAddress.Text;
-            _Person.Email = txtEmail.Text;
-            _Person.DateOfBirth = dtDate.Value;
-            if (rdFemail.Checked)
-                _Person.Gendor = 1;
+            if (_Person.Gendor == 0)
+                rbMale.Checked = true;
             else
-                _Person.Gendor = 0;
-            _Person.ImagePath = ImagePath; 
-            _Person.NationalityCountryID = Convert.ToInt32(cbCountry.SelectedValue);
-            _Person.Phone = txtPhone.Text;
-            _Person.NationalNo = txtNaNo.Text;
+                rbFemale.Checked = true;
+
+            txtAddress.Text = _Person.Address;
+            txtPhone.Text = _Person.Phone;
+            txtEmail.Text = _Person.Email;
+            cbCountry.SelectedIndex = cbCountry.FindString(_Person.country.CountryName);
+
+
+            //load person image incase it was set.
+            if (_Person.ImagePath != "")
+            {
+                pbPersonImage.ImageLocation = _Person.ImagePath;
+
+            }
+
+            //hide/show the remove linke incase there is no image for the person.
+            llRemoveImage.Visible = (_Person.ImagePath != "");
 
         }
+
+        private void frmAddUpdatePerson_Load(object sender, EventArgs e)
+        {
+            _ResetDefualtValues();
+
+            if (_Mode == enMode.Update)
+                _LoadData();
+        }
+
+        private bool _HandlePersonImage()
+        {
+
+            //this procedure will handle the person image,
+            //it will take care of deleting the old image from the folder
+            //in case the image changed. and it will rename the new image with guid and 
+            // place it in the images folder.
+
+
+            //_Person.ImagePath contains the old Image, we check if it changed then we copy the new image
+            if (_Person.ImagePath != pbPersonImage.ImageLocation)
+            {
+                if (_Person.ImagePath != "")
+                {
+                    //first we delete the old image from the folder in case there is any.
+
+                    try
+                    {
+                        File.Delete(_Person.ImagePath);
+                    }
+                    catch (IOException)
+                    {
+                        // We could not delete the file.
+                        //log it later   
+                    }
+                }
+
+                if (pbPersonImage.ImageLocation != null)
+                {
+                    //then we copy the new image to the image folder after we rename it
+                    string SourceImageFile = pbPersonImage.ImageLocation.ToString();
+
+                    if (clsUtil.CopyImageToProjectImagesFolder(ref SourceImageFile))
+                    {
+                        pbPersonImage.ImageLocation = SourceImageFile;
+                        return true;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error Copying Image File", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return false;
+                    }
+                }
+
+            }
+            return true;
+        }
+
         private void btnSave_Click(object sender, EventArgs e)
         {
 
-            FillPerson();
-
-            bool isValid = true;
-
-            if (string.IsNullOrWhiteSpace(txtEmail.Text))
+            if (!this.ValidateChildren())
             {
-                errorProvider1.SetError(txtEmail, "Email Is Requierd!");
-                isValid = false;
+                //Here we dont continue becuase the form is not valid
+                MessageBox.Show("Some fileds are not valide!, put the mouse over the red icon(s) to see the erro", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+
+            }
+
+            if (!_HandlePersonImage())
+                return;
+
+            int NationalityCountryID = clsCountry.Find(cbCountry.Text).CountryID;
+
+            _Person.FirstName = txtFirstName.Text.Trim();
+            _Person.SecondName = txtSecondName.Text.Trim();
+            _Person.ThirdName = txtThirdName.Text.Trim();
+            _Person.LastName = txtLastName.Text.Trim();
+            _Person.NationalNo = txtNationalNo.Text.Trim();
+            _Person.Email = txtEmail.Text.Trim();
+            _Person.Phone = txtPhone.Text.Trim();
+            _Person.Address = txtAddress.Text.Trim();
+            _Person.DateOfBirth = dtpDateOfBirth.Value;
+
+            if (rbMale.Checked)
+                _Person.Gendor = (byte)enGendor.Male;
+            else
+                _Person.Gendor = (byte)enGendor.Female;
+
+            _Person.NationalityCountryID = NationalityCountryID;
+
+            if (pbPersonImage.ImageLocation != null)
+                _Person.ImagePath = pbPersonImage.ImageLocation;
+            else
+                _Person.ImagePath = "";
+
+            if (_Person.Save())
+            {
+                lblPersonID.Text = _Person.PersonID.ToString();
+                //change form mode to update.
+                _Mode = enMode.Update;
+                lblTitle.Text = "Update Person";
+
+                MessageBox.Show("Data Saved Successfully.", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+                // Trigger the event to send data back to the caller form.
+                DataBack?.Invoke(this, _Person.PersonID);
             }
             else
-            {
-                errorProvider1.SetError(txtEmail, "");
+                MessageBox.Show("Error: Data Is not Saved Successfully.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-            }
-
-            if (string.IsNullOrWhiteSpace(txtNaNo.Text))
-            {
-                errorProvider1.SetError(txtNaNo, "National No is required!");
-                isValid = false;
-            }
-            else
-            {
-                errorProvider1.SetError(txtNaNo, "");
-            }
-
-            if (isValid)
-            {
-                // proceed with saving
-                string nano = txtNaNo.Text;
-                if (clsPerson.IsPersonExist(nano) && isUdateMode == false)
-                {
-
-                    errorProvider1.SetError(txtNaNo, "National No Already Exist!");
-                    isValid = false;
-                    return;
-                }
-                else
-                {
-                    if (_Person.Save())
-                    {
-
-                        string Message = "", Title = "ADD NEW";
-                        if (isUdateMode)
-                        {
-                            Message = "Updated Successfuly";
-                            Title = "Update";
-                        }
-                        else { Message = "Added Successfuly"; }
-                        MessageBox.Show(Message, Title, MessageBoxButtons.OKCancel);
-
-                        this.DialogResult = DialogResult.OK;
-
-                        DataBack?.Invoke(this);
-
-                        this.Close();
-                    }
-                }
-            }
 
 
         }
 
-        private void rdMale_CheckedChanged(object sender, EventArgs e)
+        private void llSetImage_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            if (rdMale.Checked)
+            openFileDialog1.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.gif;*.bmp";
+            openFileDialog1.FilterIndex = 1;
+            openFileDialog1.RestoreDirectory = true;
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                // Process the selected file
+                string selectedFilePath = openFileDialog1.FileName;
+                pbPersonImage.Load(selectedFilePath);
+                llRemoveImage.Visible = true;
+                // ...
+            }
+        }
+
+        private void llRemoveImage_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+            pbPersonImage.ImageLocation = null;
+
+
+
+            if (rbMale.Checked)
+                pbPersonImage.Image = Resources.Man32;
+            else
+                pbPersonImage.Image = Resources.Woman32;
+
+            llRemoveImage.Visible = false;
+        }
+
+        private void rbFemale_Click(object sender, EventArgs e)
+        {
+            //change the defualt image to female incase there is no image set.
+            if (pbPersonImage.ImageLocation == null)
                 pbPersonImage.Image = Resources.Man32;
         }
 
-        private void rdFemail_CheckedChanged(object sender, EventArgs e)
+        private void rbMale_Click(object sender, EventArgs e)
         {
-            if (rdFemail.Checked)
-            {
+            //change the defualt image to male incase there is no image set.
+            if (pbPersonImage.ImageLocation == null)
                 pbPersonImage.Image = Resources.Woman32;
-            }
         }
 
-
-        private void lblSetImage_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog ofd = new OpenFileDialog();
-            ofd.Title = "Select an Image";
-            ofd.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp;*.gif";
-
-            if (ofd.ShowDialog() == DialogResult.OK)
-            {
-                ImagePath = ofd.FileName;
-
-                // Load into PictureBox
-                pbPersonImage.Image = Image.FromFile(ImagePath);
-
-                // Optionally store the path in Tag or your Person object
-                pbPersonImage.Tag = ImagePath;
-            }
-
-            string saveFolder = Path.Combine(Application.StartupPath, "DVLD-Images");
-
-            if (!Directory.Exists(saveFolder))
-                Directory.CreateDirectory(saveFolder);
-
-            // إذا اختار المستخدم صورة جديدة
-            if (!string.IsNullOrWhiteSpace(ImagePath) && File.Exists(ImagePath))
-            {
-                // حذف الصورة القديمة (إن وجدت)
-                if (isUdateMode &&
-                    !string.IsNullOrWhiteSpace(_Person.ImagePath) &&
-                    File.Exists(_Person.ImagePath))
-                {
-                    File.Delete(_Person.ImagePath);
-                }
-
-                // إنشاء اسم جديد للصورة حتى لا يحدث تكرار
-                string extension = Path.GetExtension(ImagePath);
-                string newFileName = Guid.NewGuid().ToString() + extension;
-
-                // المسار النهائي
-                string destPath = Path.Combine(saveFolder, newFileName);
-
-                // نسخ الصورة الجديدة
-                File.Copy(ImagePath, destPath, true);
-
-                // حفظ المسار الجديد في الكائن
-                _Person.ImagePath = destPath;
-            }
-
-        }
-
-        private void txbNaNo_Validating(object sender, CancelEventArgs e)
+        private void ValidateEmptyTextBox(object sender, CancelEventArgs e)
         {
 
-            if (string.IsNullOrWhiteSpace(txtNaNo.Text))
+            // First: set AutoValidate property of your Form to EnableAllowFocusChange in designer 
+            TextBox Temp = ((TextBox)sender);
+            if (string.IsNullOrEmpty(Temp.Text.Trim()))
             {
                 e.Cancel = true;
-                txtNaNo.Focus();
-                errorProvider1.SetError(txtNaNo, "The National Number Is Requierd");
+                errorProvider1.SetError(Temp, "This field is required!");
+            }
+            else
+            {
+                //e.Cancel = false;
+                errorProvider1.SetError(Temp, null);
+            }
+
+        }
+
+        private void txtEmail_Validating(object sender, CancelEventArgs e)
+        {
+            //no need to validate the email incase it's empty.
+            if (txtEmail.Text.Trim() == "")
+                return;
+
+            //validate email format
+            if (!clsValidation.ValidateEmail(txtEmail.Text))
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(txtEmail, "Invalid Email Address Format!");
+            }
+            else
+            {
+                errorProvider1.SetError(txtEmail, null);
+            }
+            ;
+
+        }
+
+        private void txtNationalNo_Validating(object sender, CancelEventArgs e)
+        {
+
+            if (string.IsNullOrEmpty(txtNationalNo.Text.Trim()))
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(txtNationalNo, "This field is required!");
                 return;
             }
             else
             {
-                e.Cancel = false;
-                errorProvider1.SetError(txtNaNo, "");
+                errorProvider1.SetError(txtNationalNo, null);
             }
-        }
 
-        private void txEmail_Validating(object sender, CancelEventArgs e)
-        {
-
-            if (string.IsNullOrWhiteSpace(txtEmail.Text))
+            //Make sure the national number is not used by another person
+            if (txtNationalNo.Text.Trim() != _Person.NationalNo && clsPerson.IsPersonExist(txtNationalNo.Text.Trim()))
             {
                 e.Cancel = true;
-                txtEmail.Focus();
-                errorProvider1.SetError(txtEmail, "Email Is Requierd");
-                
+                errorProvider1.SetError(txtNationalNo, "National Number is used for another person!");
+
             }
             else
             {
-                e.Cancel = false;
-                errorProvider1.SetError(txtEmail, "");
+                errorProvider1.SetError(txtNationalNo, null);
             }
         }
-
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void txbPhone_Validating(object sender, CancelEventArgs e)
-        {
-
-            if (string.IsNullOrWhiteSpace(txtPhone.Text))
-            {
-                e.Cancel = true;
-                txtNaNo.Focus();
-                errorProvider1.SetError(txtPhone, "Phone Is Requierd");
-            }
-            else
-            {
-                e.Cancel = false;
-                errorProvider1.SetError(txtPhone, "");
-            }
-        }
-
-      
 
 
     }

@@ -1,4 +1,5 @@
-﻿using DVLD_BusinessLayer;
+﻿using DVLD.People;
+using DVLD_BusinessLayer;
 using System;
 using System.Windows.Forms;
 
@@ -6,7 +7,7 @@ namespace DVLD
 {
     public partial class ctrlApplicationDetails : UserControl
     {
-        int _LDAID = -1;
+        int _LDAID = -1, _LicenseID = -1;
         enum enAppStauts { New = 1, Cancled = 2, Complete = 3 };
         enAppStauts stauts;
         clsLocalDrivingLicenseApplications _application;
@@ -65,28 +66,30 @@ namespace DVLD
             lblStatusDate.Text = "[????]";
             lblCreateBy.Text = "[????]";
         }
+
         private void _FillLocalDrivingLicenseApplicationInfo()
         {
-            _LicenseID = _LocalDrivingLicenseApplication.GetActiveLicenseID();
+            _LicenseID = _application.GetActiveLicenseID();
 
             //incase there is license enable the show link.
-            llShowLicenceInfo.Enabled = (_LicenseID != -1);
+            lblPersonInfo.Enabled = (_LicenseID != -1);
 
 
-            lblLocalDrivingLicenseApplicationID.Text = _LocalDrivingLicenseApplication.LocalDrivingLicenseApplicationID.ToString();
-            lblAppliedFor.Text = clsLicenseClass.Find(_LocalDrivingLicenseApplication.LicenseClassID).ClassName;
-            lblPassedTests.Text = _LocalDrivingLicenseApplication.GetPassedTestCount().ToString() + "/3";
-            ctrlApplicationBasicInfo1.LoadApplicationInfo(_LocalDrivingLicenseApplication.ApplicationID);
+            //lblLocalDrivingLicenseApplicationID.Text = _LocalDrivingLicenseApplication.LocalDrivingLicenseApplicationID.ToString();
+            //lblAppliedFor.Text = clsLicenseClass.Find(_LocalDrivingLicenseApplication.LicenseClassID).ClassName;
+            //lblPassedTests.Text = _LocalDrivingLicenseApplication.GetPassedTestCount().ToString() + "/3";
+            //ctrlApplicationBasicInfo1.LoadApplicationInfo(_LocalDrivingLicenseApplication.ApplicationID);
 
         }
+
         private void _FillLDAByApplicationIDInfo()
         {
-            lblID.Text = _application.LDLApplicationID.ToString();
+            lblID.Text = _application.LocalDrivingLicenseApplicationID.ToString();
             lblClasses.Text = clsLicenseClass.Find(_application.LicenseClassID).ClassName;
-            lblTest.Text = _application.PassedTest(_LDAID).ToString();
+            lblTest.Text = _application.appTypeInfo.ToString();
             lblAppID.Text = _application.ApplicationID.ToString();
 
-            lblStatus.Text = clsLocalDrivingLicenseApplications.GetStaus((byte)_application.ApplicationStatus);
+            lblStatus.Text = _application.StatusText;
             lblFees.Text = _application.PaidFees.ToString();
             lblType.Text = clsApplicationTypes.Find(Convert.ToInt32(_application.ApplicationTypeID)).ApplicationTypeTitle.ToString();
             lblApplicant.Text = clsPerson.Find(_application.ApplicantPersonID).FullName;
@@ -97,7 +100,8 @@ namespace DVLD
         }
         private void lblPersonInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            frmPersonCard frm = new frmPersonCard(LDAID);
+            frmShowPersonInfo person = new frmShowPersonInfo(LDAID);
+            person.ShowDialog();
         }
 
     }
