@@ -8,15 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DVLD
+namespace DVLD.Applications.Renew_Local_Licenses
 {
-    public partial class frmPersonCard : Form
+    public partial class frmRenewLicenseApplication : Form
     {
-        public frmPersonCard(int PersonID)
+        public frmRenewLicenseApplication()
         {
             InitializeComponent();
-            ctrlPersonCard1.LoadPersonInfo(PersonID);
         }
-
     }
 }

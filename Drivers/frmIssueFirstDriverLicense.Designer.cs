@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ctrlApplicationDetails1 = new DVLD.ctrlDriverLicenseApplicationInfo();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtNote = new System.Windows.Forms.RichTextBox();
@@ -36,14 +35,7 @@
             this.btnClose = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.SuspendLayout();
-            // 
-            // ctrlApplicationDetails1
-            // 
-            this.ctrlApplicationDetails1.Location = new System.Drawing.Point(0, 0);
-            this.ctrlApplicationDetails1.Name = "ctrlApplicationDetails1";
-            this.ctrlApplicationDetails1.Size = new System.Drawing.Size(750, 297);
-            this.ctrlApplicationDetails1.TabIndex = 0;
-            // 
+            //
             // pictureBox10
             // 
             this.pictureBox10.Image = global::DVLD.Properties.Resources.Notes_32;
@@ -109,7 +101,6 @@
             this.Controls.Add(this.txtNote);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnIssue);
-            this.Controls.Add(this.ctrlApplicationDetails1);
             this.Name = "frmIssueFirstDriverLicense";
             this.Text = "frmIssueFirstDriverLicense";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
@@ -120,7 +111,6 @@
 
         #endregion
 
-        private ctrlDriverLicenseApplicationInfo ctrlApplicationDetails1;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.RichTextBox txtNote;

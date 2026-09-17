@@ -8,14 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DVLD
+namespace DVLD.Users
 {
-    public partial class frmTry : Form
+    public partial class frmUserInfo : Form
     {
-        public frmTry()
+        public frmUserInfo()
         {
             InitializeComponent();
-            ctrlApplicationDetails1.LoadInfo(38);
         }
     }
 }

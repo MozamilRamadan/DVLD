@@ -8,14 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DVLD
+namespace DVLD.People
 {
-    public partial class ctrlDetainInfo : UserControl
+    public partial class frmFindPerson : Form
     {
-        public ctrlDetainInfo()
+        public frmFindPerson()
         {
             InitializeComponent();
         }
-
     }
 }

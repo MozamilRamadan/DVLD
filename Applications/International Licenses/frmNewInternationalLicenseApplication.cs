@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DVLD
+namespace DVLD.Applications.International_Licenses
 {
-    public partial class crtlAppDetails : UserControl
+    public partial class frmNewInternationalLicenseApplication : Form
     {
-        public crtlAppDetails()
+        public frmNewInternationalLicenseApplication()
         {
             InitializeComponent();
         }

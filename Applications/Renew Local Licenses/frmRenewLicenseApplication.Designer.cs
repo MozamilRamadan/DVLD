@@ -1,6 +1,6 @@
-﻿namespace DVLD
+﻿namespace DVLD.Applications.Renew_Local_Licenses
 {
-    partial class frmPersonCard
+    partial class frmRenewLicenseApplication
     {
         /// <summary>
         /// Required designer variable.
@@ -28,31 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ctrlPersonCard1 = new DVLD.ctrlPersonCard();
-            this.SuspendLayout();
-            // 
-            // ctrlPersonCard1
-            // 
-            this.ctrlPersonCard1.AllowDrop = true;
-            this.ctrlPersonCard1.Location = new System.Drawing.Point(0, 0);
-            this.ctrlPersonCard1.Name = "ctrlPersonCard1";
-            this.ctrlPersonCard1.Size = new System.Drawing.Size(776, 317);
-            this.ctrlPersonCard1.TabIndex = 0;
-            // 
-            // frmPersonCard
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(788, 332);
-            this.Controls.Add(this.ctrlPersonCard1);
-            this.Name = "frmPersonCard";
-            this.Text = "frmPersonCard";
-            this.ResumeLayout(false);
-
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Text = "frmRenewLicenseApplication";
         }
 
         #endregion
-
-        private ctrlPersonCard ctrlPersonCard1;
     }
 }
