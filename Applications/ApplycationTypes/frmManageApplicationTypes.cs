@@ -55,5 +55,6 @@ namespace DVLD
             dgvApplicationTypes.Columns[2].HeaderText = "Fees";
             dgvApplicationTypes.Columns[2].Width = 100;
         }
+
     }
 }

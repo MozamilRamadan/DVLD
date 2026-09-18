@@ -1,4 +1,5 @@
-﻿using DVLD_BusinessLayer;
+﻿using DVLD.Global_Glasses;
+using DVLD_BusinessLayer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,50 +9,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static DVLD_BusinessLayer.clsTestType;
 
 namespace DVLD
 {
     public partial class frmTakeTest : Form
     {
-        clsTest _test;
-        clsTestAppointment _testApp;
-        int _appID = -1, _TestTypeID = -1;
-        bool IsUpdateMode = false;
-        public frmTakeTest(int id, int testType)
+        private int _AppointmentID;
+        private clsTestType.enTestType _TestType;
+
+        private int _TestID = -1;
+        private clsTest _Test;
+
+
+        public frmTakeTest(int AppointmentID, clsTestType.enTestType TestType)
         {
             InitializeComponent();
-            _appID = id;
-            _TestTypeID = testType;
-            FillData();
-            _LoadPictureAndTitle();
+            _AppointmentID = AppointmentID;
+            _TestType = TestType;
         }
 
-        void FillData()
-        {
-            _testApp = clsTestAppointment.Find(_appID);
-            clsLocalDrivingLicenseApplications _app = clsLocalDrivingLicenseApplications.Find(_testApp.LocalDrivingLicenseApplicationID);
-            if (_testApp == null )
-                return;
-            lblAppID.Text = _testApp.LocalDrivingLicenseApplicationID.ToString();
-            lblClassID.Text = clsLicenseClass.Find(_app.LicenseClassID).ClassName;
-            lblName.Text = clsPerson.Find(_app.ApplicantPersonID).FullName;
-            lblTrial.Text = "0";
-            DTPicker.Value = _testApp.AppointmentDate;
-            lblFees.Text = _testApp.PaidFees.ToString();
-            lblTestID.Text ="Not Taken Yet";
-
-        }
-        void LoadData()
-        {
-            _test = new clsTest();
-            _test.TestAppointmentID = _testApp.TestAppointmentID;
-            if (rdPass.Checked) 
-                _test.TestResult = true;
-            else
-                _test.TestResult = false;
-            _test.Notes = txtNote.Text;
-            _test.CreatedByUserID = clsCurrentUser._USER.UserID;
-        }
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -59,62 +36,60 @@ namespace DVLD
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            string Message = "Added Successfuly", Title = "Add New";
-            LoadData();
-            if (_test.Save())
+
+            if (MessageBox.Show("Are you sure you want to save? After that you cannot change the Pass/Fail results after you save?.",
+                        "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No
+               )
             {
-                _testApp.IsLocked = true;
-                _testApp.Save();
+                return;
+            }
 
-                if (_TestTypeID == 3 && _test.TestResult)
-                {
-                    clsLocalDrivingLicenseApplications.SetApplicationCompleted(_appID);
-                }
-                if (IsUpdateMode)
-                {
-                    Message = "Update Successfuly";
-                    Title = "Update";
+            _Test.TestAppointmentID = _AppointmentID;
+            _Test.TestResult = rdPass.Checked;
+            _Test.Notes = txtNote.Text.Trim();
+            _Test.CreatedByUserID = clsGlobal.CurrentUser.UserID;
 
-                    MessageBox.Show(Message, Title, MessageBoxButtons.OKCancel);
-                }
-                else
-                {
-                    MessageBox.Show(Message, Title, MessageBoxButtons.OKCancel);
-                }
+            if (_Test.Save())
+            {
+                MessageBox.Show("Data Saved Successfully.", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                btnSave.Enabled = false;
+
             }
             else
-            {
-                MessageBox.Show("Faild To Add", "Error", MessageBoxButtons.OKCancel);
-            }
-
-            FillData();
+                MessageBox.Show("Error: Data Is not Saved Successfully.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
-
-        private void _LoadPictureAndTitle()
+        private void frmTakeTest_Load(object sender, EventArgs e)
         {
-            switch (_TestTypeID)
-            {
-                case 1:
-                    {
-                        groupBox1.Text = "Vision Test";
-                        pbType.Image = Properties.Resources.Vision_512;
-                    }
-                    break;
-                case 2:
-                    {
-                        groupBox1.Text = "Written Test";
-                        pbType.Image = Properties.Resources.Written_Test_512;
-                    }
-                    break;
-                case 3:
-                    {
-                        groupBox1.Text = "Street Test";
-                        pbType.Image = Properties.Resources.driving_test_512;
-                    }
-                    break;
-            }
-        }
 
+            ctrl.TestTypeID = _TestType;
+
+            ctrlSecheduledTest1.LoadInfo(_AppointmentID);
+
+            if (ctrlSecheduledTest1.TestAppointmentID == -1)
+                btnSave.Enabled = false;
+            else
+                btnSave.Enabled = true;
+
+
+            int _TestID = ctrlSecheduledTest1.TestID;
+            if (_TestID != -1)
+            {
+                _Test = clsTest.Find(_TestID);
+
+                if (_Test.TestResult)
+                    rbPass.Checked = true;
+                else
+                    rbFail.Checked = true;
+                txtNotes.Text = _Test.Notes;
+
+                lblUserMessage.Visible = true;
+                rbFail.Enabled = false;
+                rbPass.Enabled = false;
+            }
+
+            else
+                _Test = new clsTest();
+        }
     }
 }

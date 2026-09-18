@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvLicence = new System.Windows.Forms.DataGridView();
             this.cmFormat = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tsmShowDetails = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -47,31 +47,35 @@
             this.showLicenseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripSeparator();
             this.showPersonLicensessHistoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
             this.lblRecords = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.cmbFillter = new System.Windows.Forms.ComboBox();
+            this.cmFilter = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.txtFilterValue = new System.Windows.Forms.TextBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLicence)).BeginInit();
             this.cmFormat.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvLicence
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToResizeColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.ContextMenuStrip = this.cmFormat;
-            this.dataGridView1.Location = new System.Drawing.Point(43, 231);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1072, 254);
-            this.dataGridView1.TabIndex = 18;
+            this.dgvLicence.AllowUserToAddRows = false;
+            this.dgvLicence.AllowUserToResizeColumns = false;
+            this.dgvLicence.BackgroundColor = System.Drawing.Color.White;
+            this.dgvLicence.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvLicence.ContextMenuStrip = this.cmFormat;
+            this.dgvLicence.Location = new System.Drawing.Point(12, 262);
+            this.dgvLicence.Name = "dgvLicence";
+            this.dgvLicence.RowHeadersWidth = 51;
+            this.dgvLicence.RowTemplate.Height = 24;
+            this.dgvLicence.Size = new System.Drawing.Size(1421, 333);
+            this.dgvLicence.TabIndex = 18;
             // 
             // cmFormat
             // 
@@ -125,6 +129,7 @@
             this.cancelAppToolStripMenuItem.Name = "cancelAppToolStripMenuItem";
             this.cancelAppToolStripMenuItem.Size = new System.Drawing.Size(290, 24);
             this.cancelAppToolStripMenuItem.Text = "Cancel Application";
+            this.cancelAppToolStripMenuItem.Click += new System.EventHandler(this.cancelAppToolStripMenuItem_Click);
             // 
             // toolStripMenuItem2
             // 
@@ -140,7 +145,6 @@
             this.scheduleTestTSMI.Name = "scheduleTestTSMI";
             this.scheduleTestTSMI.Size = new System.Drawing.Size(290, 24);
             this.scheduleTestTSMI.Text = "Sechdule Test";
-           // this.scheduleTestTSMI.DropDownOpening += new System.EventHandler(this.scheduleTestTSMI_DropDownOpening);
             // 
             // sechduleVissionTestToolStripMenuItem
             // 
@@ -199,65 +203,69 @@
             this.showPersonLicensessHistoryToolStripMenuItem.Text = "Show Person Licensess History";
             this.showPersonLicensessHistoryToolStripMenuItem.Click += new System.EventHandler(this.showPersonLicensessHistoryToolStripMenuItem_Click);
             // 
-            // button2
+            // btnClose
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Image = global::DVLD.Properties.Resources.Close_32;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(979, 491);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(136, 57);
-            this.button2.TabIndex = 17;
-            this.button2.Text = "cancel";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnClose.BackColor = System.Drawing.Color.White;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.Image = global::DVLD.Properties.Resources.Close_32;
+            this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClose.Location = new System.Drawing.Point(1306, 613);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(127, 45);
+            this.btnClose.TabIndex = 17;
+            this.btnClose.Text = "Close";
+            this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnClose.UseVisualStyleBackColor = false;
             // 
             // lblRecords
             // 
             this.lblRecords.AutoSize = true;
-            this.lblRecords.Location = new System.Drawing.Point(124, 494);
+            this.lblRecords.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRecords.Location = new System.Drawing.Point(143, 623);
             this.lblRecords.Name = "lblRecords";
-            this.lblRecords.Size = new System.Drawing.Size(43, 16);
+            this.lblRecords.Size = new System.Drawing.Size(74, 25);
             this.lblRecords.TabIndex = 16;
             this.lblRecords.Text = "[????]";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(40, 494);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(19, 623);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 16);
+            this.label3.Size = new System.Drawing.Size(116, 25);
             this.label3.TabIndex = 14;
-            this.label3.Text = "# Records";
+            this.label3.Text = "# Records:";
             // 
-            // cmbFillter
+            // cmFilter
             // 
-            this.cmbFillter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbFillter.FormattingEnabled = true;
-            this.cmbFillter.Location = new System.Drawing.Point(147, 187);
-            this.cmbFillter.Name = "cmbFillter";
-            this.cmbFillter.Size = new System.Drawing.Size(121, 24);
-            this.cmbFillter.TabIndex = 13;
+            this.cmFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmFilter.FormattingEnabled = true;
+            this.cmFilter.Location = new System.Drawing.Point(148, 218);
+            this.cmFilter.Name = "cmFilter";
+            this.cmFilter.Size = new System.Drawing.Size(236, 24);
+            this.cmFilter.TabIndex = 13;
+            this.cmFilter.SelectedIndexChanged += new System.EventHandler(this.cmFilter_SelectedIndexChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(35, 187);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(27, 218);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(93, 20);
+            this.label2.Size = new System.Drawing.Size(104, 25);
             this.label2.TabIndex = 12;
             this.label2.Text = "Filter By :";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(321, 125);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label1.Location = new System.Drawing.Point(400, 157);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(513, 29);
+            this.label1.Size = new System.Drawing.Size(571, 31);
             this.label1.TabIndex = 11;
             this.label1.Text = "Manage Local Driving License Applications";
             // 
@@ -265,9 +273,9 @@
             // 
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.Image = global::DVLD.Properties.Resources.New_Driving_License_32;
-            this.btnAdd.Location = new System.Drawing.Point(1044, 180);
+            this.btnAdd.Location = new System.Drawing.Point(1350, 197);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(55, 45);
+            this.btnAdd.Size = new System.Drawing.Size(83, 59);
             this.btnAdd.TabIndex = 15;
             this.btnAdd.UseMnemonic = false;
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -276,32 +284,60 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::DVLD.Properties.Resources.Applications;
-            this.pictureBox1.Location = new System.Drawing.Point(524, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(622, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 96);
+            this.pictureBox1.Size = new System.Drawing.Size(189, 142);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
+            // 
+            // txtFilterValue
+            // 
+            this.txtFilterValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtFilterValue.Location = new System.Drawing.Point(406, 218);
+            this.txtFilterValue.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtFilterValue.Name = "txtFilterValue";
+            this.txtFilterValue.Size = new System.Drawing.Size(256, 22);
+            this.txtFilterValue.TabIndex = 127;
+            this.txtFilterValue.TextChanged += new System.EventHandler(this.txtFilterValue_TextChanged);
+            this.txtFilterValue.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFilterValue_KeyPress);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox2.Image = global::DVLD.Properties.Resources.Local_32;
+            this.pictureBox2.InitialImage = null;
+            this.pictureBox2.Location = new System.Drawing.Point(779, 46);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(78, 58);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 131;
+            this.pictureBox2.TabStop = false;
             // 
             // frmLocalDrivingLicenseApplications
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1127, 549);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button2);
+            this.ClientSize = new System.Drawing.Size(1445, 665);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.txtFilterValue);
+            this.Controls.Add(this.dgvLicence);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.lblRecords);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.cmbFillter);
+            this.Controls.Add(this.cmFilter);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "frmLocalDrivingLicenseApplications";
             this.Text = "frmLocalDrivingLicenseApplications";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.frmLocalDrivingLicenseApplications_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLicence)).EndInit();
             this.cmFormat.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -309,17 +345,17 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvLicence;
         private System.Windows.Forms.ContextMenuStrip cmFormat;
         private System.Windows.Forms.ToolStripMenuItem tsmShowDetails;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cancelAppToolStripMenuItem;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Label lblRecords;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox cmbFillter;
+        private System.Windows.Forms.ComboBox cmFilter;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -335,5 +371,7 @@
         private System.Windows.Forms.ToolStripMenuItem sechduleVissionTestToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sechduleWriteTestToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sechduleStrretTestToolStripMenuItem;
+        private System.Windows.Forms.TextBox txtFilterValue;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

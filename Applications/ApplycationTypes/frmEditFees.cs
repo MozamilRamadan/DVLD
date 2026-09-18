@@ -70,13 +70,22 @@ namespace DVLD
         private void txtTitle_Validating(object sender, CancelEventArgs e)
         {
 
+
+            if (string.IsNullOrEmpty(txtTitle.Text.Trim()))
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(txtTitle, "Title cannot be empty!");
+            }
+            else
+            {
+                errorProvider1.SetError(txtTitle, null);
+            }
+
+
         }
 
         private void txtFees_Validating(object sender, CancelEventArgs e)
         {
-
-
-
             if (string.IsNullOrEmpty(txtFees.Text.Trim()))
             {
                 e.Cancel = true;
@@ -102,6 +111,19 @@ namespace DVLD
             }
             ;
 
+
+            if (!clsValidation.IsNumber(txtFees.Text))
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(txtFees, "Invalid Number.");
+            }
+            else
+            {
+                errorProvider1.SetError(txtFees, null);
+            }
+            ;
+
         }
+
     }
 }

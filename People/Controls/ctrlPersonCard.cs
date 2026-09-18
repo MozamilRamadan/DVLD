@@ -22,6 +22,10 @@ namespace DVLD
         {
             get { return _PersonID; }
         }
+        public clsPerson SelectedPersonInfo
+        {
+            get { return _Person; }
+        }
         public ctrlPersonCard()
         {
             InitializeComponent();
